@@ -1,0 +1,79 @@
+[
+ {
+  "sq": [
+   -1,
+   0
+  ],
+  "box": [
+   1560,
+   270,
+   2040,
+   740
+  ],
+  "type": "wrong_architecture",
+  "severity": 5,
+  "note": "This is the Templo Expiatorio del Sagrado Coraz\u00f3n: a WHITE/pale-grey neo-gothic church with very slim pointed spires, NOT a baroque golden cathedral with domes. In front of it a flat stone plaza with four small square gardens.",
+  "closeup": true,
+  "poi": "expiatorio",
+  "n": 2,
+  "source": "manual",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   4
+  ],
+  "box": [
+   1057,
+   1425,
+   1553,
+   1808
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A large multi-towered cathedral complex is drawn where Image 1 shows standard low-rise residential blocks. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -5,
+   1
+  ],
+  "box": [
+   1401,
+   1081,
+   1629,
+   1335
+  ],
+  "type": "wrong_architecture",
+  "severity": 4,
+  "note": "The church is depicted with large twin towers and exaggerated height, whereas the aerial photo shows a lower structure with pale domes. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -1,
+   0
+  ],
+  "box": [
+   1691,
+   309,
+   2034,
+   649
+  ],
+  "type": "wrong_architecture",
+  "severity": 4,
+  "note": "Cathedral is depicted with yellow baroque towers instead of the real neo-Gothic stone architecture. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ }
+]

@@ -41,6 +41,25 @@ def judge(src_path, img_bytes):
         print('  judge failed:', str(e)[:200], file=sys.stderr)
         return 5.0, ['judge failed']
 
+STYLE_PROMPT = ("These are two crops from one tile of an isometric pixel-art city map. Rate the DRAWING STYLE only, not the content. "
+  "pixel_score 0-10: 10 = dense retro pixel-art sprites (visible hard pixels, textured roofs, tiny windows, crisp dark outlines, saturated colours), "
+  "0 = smooth flat vector illustration (large uniform fills, soft or no outlines, little texture, washed-out). Reply ONLY JSON: {\"pixel_score\": n}")
+def style_score(img_bytes):
+    """0-10 how much the candidate looks like dense pixel art (vs flat vector). Used to keep the map's style uniform."""
+    try:
+        im = Image.open(io.BytesIO(img_bytes)).convert('RGB'); W = im.width; k = W / 2048
+        crops = [im.crop((int(600*k), int(600*k), int(1200*k), int(1200*k))), im.crop((int(1200*k), int(300*k), int(1800*k), int(900*k)))]
+        parts = []
+        for c in crops:
+            buf = io.BytesIO(); c.save(buf, 'PNG', optimize=True); parts.append({'inline_data': {'mime_type': 'image/png', 'data': base64.b64encode(buf.getvalue()).decode()}})
+        parts.append({'text': STYLE_PROMPT})
+        body = {'contents': [{'parts': parts}], 'generationConfig': {'responseMimeType': 'application/json', 'temperature': 0.0}}
+        req = urllib.request.Request(f'https://generativelanguage.googleapis.com/v1beta/models/{JUDGE_MODEL}:generateContent', data=json.dumps(body).encode(), headers={'Content-Type': 'application/json', 'x-goog-api-key': KEY})
+        with urllib.request.urlopen(req, timeout=120) as r: res = json.load(r)
+        return float(json.loads(res['candidates'][0]['content']['parts'][0]['text']).get('pixel_score', 5))
+    except Exception as e:
+        print('  style judge failed:', str(e)[:120], file=sys.stderr); return 5.0
+
 def _shrink(img_bytes, side):
     im = Image.open(io.BytesIO(img_bytes)).convert('RGB').resize((side, side), Image.BOX)
     buf = io.BytesIO(); im.save(buf, 'PNG', optimize=True); return buf.getvalue()
@@ -98,6 +117,7 @@ def main():
     ap.add_argument('--n', type=int, default=2, help='candidates per square; best fidelity wins')
     ap.add_argument('--min-judge', type=float, default=6.5, help='keep generating (up to --max-n) until a candidate reaches this judge score')
     ap.add_argument('--max-n', type=int, default=4)
+    ap.add_argument('--min-style', type=float, default=6.0, help='keep generating until a candidate is at least this pixel-art-dense (0-10)')
     a = ap.parse_args()
     out = ROOT/a.out; out.mkdir(exist_ok=True, parents=True)
     log_path = out/'gen_log.jsonl'
@@ -117,18 +137,18 @@ def main():
         t = time.time()
         cands = []
         for k in range(a.max_n):
-            if k >= a.n and max(c[2] for c in cands) >= a.min_judge: break
+            if k >= a.n and any(c[2] >= a.min_judge and c[4] >= a.min_style for c in cands): break
             img, usage = generate(f, a.anchor, a.size)
-            js, issues = judge(f, img)
-            sc = js + 0.5*fidelity(f, img)  # judge dominates; SSIM breaks ties
-            print(f'  cand {k}: judge={js} issues={issues[:3]}')
+            js, issues = judge(f, img); st = style_score(img)
+            sc = js + 0.5*fidelity(f, img) + (0.8*st if st >= a.min_style else -3 + 0.8*st)  # fidelity first, but flat-vector candidates are heavily penalised
+            print(f'  cand {k}: judge={js} style={st} issues={issues[:2]}')
             (out/'candidates').mkdir(exist_ok=True)
             (out/'candidates'/f'{f.stem}{a.suffix}_c{k}_{sc:.3f}.png').write_bytes(img)
-            cands.append((sc, img, js, usage))
+            cands.append((sc, img, js, usage, st))
         cands.sort(key=lambda c: -c[0])
-        sc, img, js, usage = cands[0]
+        sc, img, js, usage, st = cands[0]
         dst.write_bytes(img)
-        rec = {'src': f.name, 'dst': dst.name, 'model': MODEL, 'size': a.size, 'anchor': a.anchor, 'secs': round(time.time()-t,1), 'usd': round(PRICE.get(a.size)*len(cands),3), 'n': len(cands), 'judge': js, 'scores': [c[0] for c in cands], 'judges': [c[2] for c in cands], 'usage': usage, 'ts': time.time()}
+        rec = {'src': f.name, 'dst': dst.name, 'model': MODEL, 'size': a.size, 'anchor': a.anchor, 'secs': round(time.time()-t,1), 'usd': round(PRICE.get(a.size)*len(cands),3), 'n': len(cands), 'judge': js, 'style': st, 'scores': [c[0] for c in cands], 'judges': [c[2] for c in cands], 'styles': [c[4] for c in cands], 'usage': usage, 'ts': time.time()}
         with open(log_path, 'a') as lf: lf.write(json.dumps(rec)+'\n')
         print(f'{dst.name}  {rec["secs"]}s  ${rec["usd"]}')
 

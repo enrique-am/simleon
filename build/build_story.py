@@ -68,6 +68,8 @@ det_total = sum(det_types.values())
 backlog = len([j for j in json.load(open(ROOT/'build/refine_queue_backlog.json'))]) if (ROOT/'build/refine_queue_backlog.json').exists() else 0
 TYPE_ES = {'invented_landmark':'templo o edificio inventado','wrong_architecture':'edificio real mal dibujado','wrong_size':'tamaño equivocado','wrong_ground':'pasto donde hay tierra o azoteas','missing_structure':'falta algo que sí existe'}
 det_list = ', '.join(f"{v} {TYPE_ES.get(k,k)}" for k,v in sorted(det_types.items(), key=lambda kv:-kv[1]))
+restyled = [json.loads(l) for l in open(ROOT/'pixels_pro/gen_log.jsonl') if '"style"' in l]
+n_restyled = len(restyled); restyle_usd = sum(r['usd'] for r in restyled)
 swatches = ''.join(f'<i style="background:rgb({r},{g},{b})"></i>' for r, g, b in sorted(pal, key=lambda c: (0.299*c[0]+0.587*c[1]+0.114*c[2])))
 prompt_txt = (ROOT/'gen/prompt.txt').read_text().strip()
 
@@ -218,6 +220,8 @@ footer{{margin-top:70px;padding-top:20px;border-top:1px solid var(--rule);font-s
 <div class="eyebrow">06 · La paleta</div>
 <h2>{len(pal)} colores, como mandaba la tarjeta VGA</h2>
 <p>Los cuadros salen del modelo con miles de colores y con ligeras variaciones de tono entre uno y otro. Para que el mosaico se sienta como <em>un solo</em> juego, se reduce todo a una paleta única de {len(pal)} colores calculada con k-means sobre una muestra de todos los cuadros, sin tramado (dithering). SimCity 2000 corría en 256 colores; aquí es a la vez guiño y pegamento. El mosaico se dibuja a {meta['grid']} px por cuadro ({meta['grid']/geo.W:.2f} px/m) y el visor lo amplía con interpolación desactivada para que el píxel se vea píxel.</p>
+<h3>El mismo juego en todos los cuadros</h3>
+<p>Aun con el mismo prompt, Nano Banana Pro tiene dos "modos": a veces entrega pixel art denso —azoteas con textura, ventanitas, contornos duros— y a veces una ilustración vectorial plana y pálida. Puestos uno junto a otro, el salto en la costura se nota de inmediato. La solución tiene tres partes. Primero, una <strong>auditoría de estilo</strong>: el mismo juez califica dos recortes de cada cuadro del 0 al 10 según qué tan "pixel" se ven, sin mirar el contenido; los que sacan 5 o menos se regeneran. Segundo, esa nota entra en la selección de candidatos: un cuadro fiel pero plano ya no gana. Tercero, antes de cortar las teselas, cada cuadro se <strong>normaliza en color</strong> —su brillo y contraste por canal se acercan un 60% a la mediana de todo el mapa—, así las costuras dejan de ser saltos de tono. En esta pasada se regeneraron {n_restyled} cuadros por ${restyle_usd:.2f}.</p>
 <figure><div class="sw">{swatches}</div><figcaption>La paleta compartida, ordenada por luminosidad: terracota de azoteas, ocres de cantera, grises de asfalto y lámina, los verdes de las jardineras.</figcaption></figure>
 <figure class="wide"><img class="px" src="{fig_seam}" alt="Costura entre dos cuadros generados por separado"><figcaption>Costura entre los cuadros (−2, 1) y (−1, 1), generados por separado. La geometría embona porque la cámara es idéntica; el estilo embona por el prompt y la paleta.</figcaption></figure>
 

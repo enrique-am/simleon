@@ -1,6 +1,7 @@
 Turn this aerial photo into a screenshot from a 1990s isometric city-building video game (SimCity 2000, RollerCoaster Tycoon, Transport Tycoon). The result must look like hand-placed PIXEL ART sprites, NOT a photograph and NOT a painting.
 
 STYLE (most important):
+- DENSE, richly textured pixel art — NOT a flat vector illustration. Every rooftop shows texture (tiles, gravel, vents, water tanks), every facade has rows of tiny windows, every block is broken into many small individual houses with crisp dark 1-pixel outlines. Avoid large empty uniform colour fills.
 - Big, clearly visible pixels: draw as if the image were 512x512 pixels and then enlarged with hard edges. Absolutely no photographic texture, no blur, no noise, no gradients, no anti-aliasing.
 - Retro 16-bit palette of about 48 flat colours. Every surface is a flat colour fill with 2-3 tone cel shading. Light from the top-left, hard one-tone shadows to the bottom-right.
 - Every building is a simple game sprite: flat rooftop (terracotta red, warm beige, off-white, grey concrete or pale blue-grey corrugated sheet), facades with a row of tiny dark pixel windows.
