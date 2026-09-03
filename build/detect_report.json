@@ -1,0 +1,1076 @@
+{
+ "-5,4": [
+  {
+   "box": [
+    195,
+    440,
+    280,
+    565
+   ],
+   "type": "wrong_size",
+   "severity": 3,
+   "note": "Rendered as a large multi-wing complex, whereas the photo shows only two small, modest buildings."
+  }
+ ],
+ "-4,4": [
+  {
+   "box": [
+    103,
+    174,
+    201,
+    356
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Salvage yard full of scrap cars is depicted as a striped commercial parking lot."
+  },
+  {
+   "box": [
+    290,
+    218,
+    622,
+    990
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Dry ditch and ravine bottom drawn with a continuous bright green strip instead of dry terrain with patchy scrub."
+  },
+  {
+   "box": [
+    0,
+    552,
+    114,
+    808
+   ],
+   "type": "wrong_ground",
+   "severity": 2,
+   "note": "Prominent dark scorched/burned field in photo is shown as uniform plain terrain."
+  }
+ ],
+ "-3,4": [],
+ "-2,4": [
+  {
+   "box": [
+    330,
+    0,
+    432,
+    137
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Vacant dirt lot in photo is depicted as a green manicured lawn."
+  }
+ ],
+ "-1,4": [],
+ "0,4": [
+  {
+   "box": [
+    699,
+    386,
+    795,
+    481
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "A large twin-towered church is drawn where the photo shows standard low-rise residential houses."
+  },
+  {
+   "box": [
+    194,
+    138,
+    237,
+    179
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "A small two-towered church has been placed over ordinary residential dwellings."
+  }
+ ],
+ "1,4": [
+  {
+   "box": [
+    267,
+    688,
+    380,
+    856
+   ],
+   "type": "wrong_architecture",
+   "severity": 4,
+   "note": "Commercial building rendered as an open sports stadium with a pitch."
+  }
+ ],
+ "2,4": [
+  {
+   "box": [
+    267,
+    424,
+    385,
+    555
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "A large church with twin towers is drawn in the central field where the photo shows only open dry land."
+  }
+ ],
+ "3,4": [
+  {
+   "box": [
+    750,
+    0,
+    1000,
+    470
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Entire street grid and buildings drawn over what is an obscured/cut-off corner in the photo."
+  },
+  {
+   "box": [
+    520,
+    155,
+    715,
+    475
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Dry, barren dirt field depicted as a manicured green lawn with shaped pathways."
+  },
+  {
+   "box": [
+    716,
+    174,
+    874,
+    436
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Barren dirt lot with dark burn marks drawn as a lush green park."
+  }
+ ],
+ "4,4": [
+  {
+   "box": [
+    660,
+    545,
+    755,
+    690
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Vacant dirt lot rendered as a bright green lawn."
+  },
+  {
+   "box": [
+    346,
+    663,
+    434,
+    797
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Dry scrub ground depicted as a green park."
+  },
+  {
+   "box": [
+    523,
+    442,
+    595,
+    567
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Brown dirt field shown as green grass."
+  }
+ ],
+ "5,4": [
+  {
+   "box": [
+    326,
+    880,
+    421,
+    1000
+   ],
+   "type": "missing_structure",
+   "severity": 3,
+   "note": "Large warehouse complex shown in photo is replaced by bare ground."
+  },
+  {
+   "box": [
+    648,
+    620,
+    795,
+    787
+   ],
+   "type": "wrong_ground",
+   "severity": 2,
+   "note": "Dense band of woodland replaces mostly open, dry ground."
+  }
+ ],
+ "-5,3": [
+  {
+   "box": [
+    862,
+    763,
+    964,
+    919
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Rendered as a green turf field, but photo shows a dry dirt lot."
+  },
+  {
+   "box": [
+    363,
+    538,
+    475,
+    634
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Depicted as a lush lawn, whereas the photo shows bare dirt and gravel."
+  },
+  {
+   "box": [
+    486,
+    331,
+    570,
+    433
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Drawn as an open green park, but the aerial photo shows unpaved barren ground."
+  }
+ ],
+ "-4,3": [
+  {
+   "box": [
+    348,
+    642,
+    484,
+    767
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Modern arched church rendered as a traditional baroque cathedral with domes and towers."
+  }
+ ],
+ "-3,3": [
+  {
+   "box": [
+    721,
+    191,
+    840,
+    325
+   ],
+   "type": "wrong_ground",
+   "severity": 4,
+   "note": "Vacant dirt lot replaced by a manicured green park with an estate."
+  },
+  {
+   "box": [
+    471,
+    627,
+    517,
+    705
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Standard city block drawn with an invented grassy park area."
+  }
+ ],
+ "-2,3": [
+  {
+   "box": [
+    193,
+    646,
+    286,
+    772
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "An invented soccer stadium is depicted where the photo shows an open dirt and paved lot."
+  },
+  {
+   "box": [
+    161,
+    921,
+    211,
+    979
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "A large prominent dome is depicted where the photo shows ordinary urban roofs."
+  },
+  {
+   "box": [
+    257,
+    840,
+    307,
+    898
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "A large domed structure is drawn where standard residential roofs exist."
+  },
+  {
+   "box": [
+    453,
+    440,
+    549,
+    568
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "A pedestrian plaza is drawn replacing an area with dense buildings and streets."
+  }
+ ],
+ "-1,3": [
+  {
+   "box": [
+    0,
+    317,
+    107,
+    501
+   ],
+   "type": "missing_structure",
+   "severity": 3,
+   "note": "Residential blocks and streets replaced by a wide dirt strip."
+  },
+  {
+   "box": [
+    303,
+    208,
+    386,
+    342
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Urban housing blocks replaced by an empty dirt lot."
+  }
+ ],
+ "0,3": [
+  {
+   "box": [
+    850,
+    351,
+    985,
+    500
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Image 2 shows a stadium with a field and dome, where Image 1 has a white industrial warehouse."
+  }
+ ],
+ "1,3": [],
+ "2,3": [],
+ "3,3": [],
+ "4,3": [
+  {
+   "box": [
+    280,
+    220,
+    460,
+    515
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Industrial basins and scrub replaced by an open vehicle lot."
+  },
+  {
+   "box": [
+    0,
+    115,
+    60,
+    230
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Urban buildings replaced by an open field."
+  }
+ ],
+ "5,3": [
+  {
+   "box": [
+    136,
+    822,
+    248,
+    922
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Large cathedral added in an open, empty field."
+  },
+  {
+   "box": [
+    422,
+    187,
+    502,
+    269
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Large church drawn over dense residential buildings."
+  },
+  {
+   "box": [
+    15,
+    10,
+    124,
+    146
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Open sports field depicted as a large enclosed stadium."
+  },
+  {
+   "box": [
+    233,
+    895,
+    323,
+    997
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Large warehouse sheds drawn in an empty field."
+  }
+ ],
+ "-5,2": [],
+ "-4,2": [
+  {
+   "box": [
+    558,
+    750,
+    651,
+    836
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Large twin-towered cathedral with dome drawn over residential lots and vacant land."
+  },
+  {
+   "box": [
+    503,
+    638,
+    559,
+    696
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Ornate church building drawn where standard residential buildings exist."
+  }
+ ],
+ "-3,2": [
+  {
+   "box": [
+    435,
+    920,
+    510,
+    942
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Ornate green tower drawn where the photo shows a simple telecommunications mast."
+  },
+  {
+   "box": [
+    365,
+    0,
+    680,
+    360
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Dry dirt terrain and sparse trees depicted as uniform green lawn."
+  },
+  {
+   "box": [
+    730,
+    960,
+    770,
+    1000
+   ],
+   "type": "missing_structure",
+   "severity": 2,
+   "note": "Distinctive church dome in photo replaced with standard residential roofs."
+  }
+ ],
+ "-2,2": [],
+ "-1,2": [
+  {
+   "box": [
+    804,
+    813,
+    890,
+    893
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "A prominent twin-towered church is depicted where the photo shows only ordinary low-rise residential buildings."
+  }
+ ],
+ "0,2": [
+  {
+   "box": [
+    124,
+    330,
+    189,
+    430
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Industrial roof embellished into a stylized modern auditorium with blue trim."
+  }
+ ],
+ "1,2": [
+  {
+   "box": [
+    432,
+    265,
+    520,
+    353
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Rendered as an elaborate twin-towered cathedral instead of the modest white parish church in the photo."
+  },
+  {
+   "box": [
+    98,
+    215,
+    158,
+    306
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Depicted as a green park where the aerial photo shows residential buildings."
+  }
+ ],
+ "2,2": [
+  {
+   "box": [
+    386,
+    352,
+    448,
+    403
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Drawn as a twin-towered church, but the photo shows a simple low-rise building."
+  }
+ ],
+ "3,2": [
+  {
+   "box": [
+    551,
+    676,
+    615,
+    749
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Church added where the photo shows an open dirt lot."
+  },
+  {
+   "box": [
+    292,
+    292,
+    342,
+    346
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Church with tower depicted where photo shows standard houses."
+  }
+ ],
+ "4,2": [
+  {
+   "box": [
+    757,
+    0,
+    877,
+    175
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Bare dirt oval arena drawn with American football field markings"
+  }
+ ],
+ "5,2": [],
+ "-5,1": [
+  {
+   "box": [
+    550,
+    694,
+    635,
+    786
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Drawn as an ornate ochre twin-tower cathedral, but the photo shows a simpler structure with white domes."
+  },
+  {
+   "box": [
+    618,
+    865,
+    672,
+    900
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "A slender tower is depicted where the aerial photo shows only ordinary residential rooftops."
+  }
+ ],
+ "-4,1": [
+  {
+   "box": [
+    299,
+    488,
+    431,
+    639
+   ],
+   "note": "Large cathedral added over standard residential blocks.",
+   "severity": 4,
+   "type": "invented_landmark"
+  },
+  {
+   "box": [
+    243,
+    683,
+    387,
+    875
+   ],
+   "note": "Stadium and sports complex constructed over an empty lot.",
+   "severity": 4,
+   "type": "invented_landmark"
+  }
+ ],
+ "-3,1": [
+  {
+   "box": [
+    314,
+    296,
+    391,
+    382
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Prominent twin-towered church added where photo shows regular residential buildings."
+  },
+  {
+   "box": [
+    302,
+    11,
+    357,
+    63
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Small church tower drawn where photo shows ordinary flat-roofed structures."
+  }
+ ],
+ "3,1": [],
+ "4,1": [
+  {
+   "box": [
+    628,
+    276,
+    730,
+    400
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "A twin-towered cathedral is depicted where the photo shows a modern red-roofed commercial structure."
+  }
+ ],
+ "5,1": [],
+ "-5,0": [
+  {
+   "box": [
+    549,
+    922,
+    637,
+    1000
+   ],
+   "type": "wrong_ground",
+   "severity": 4,
+   "note": "Dense urban blocks replaced with blank empty ground."
+  },
+  {
+   "box": [
+    0,
+    650,
+    97,
+    887
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Large continuous woodland area drawn over regular residential blocks."
+  }
+ ],
+ "-4,0": [
+  {
+   "box": [
+    706,
+    647,
+    804,
+    735
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "A twin-towered church is depicted where the aerial photo shows a flat-roofed complex."
+  }
+ ],
+ "-3,0": [
+  {
+   "box": [
+    400,
+    481,
+    479,
+    571
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Large twin-towered church added where regular low-rise buildings exist in the photo."
+  },
+  {
+   "box": [
+    301,
+    711,
+    389,
+    761
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Tall tower building added where photo shows low-rise urban fabric."
+  }
+ ],
+ "3,0": [
+  {
+   "box": [
+    431,
+    567,
+    548,
+    683
+   ],
+   "note": "Large church towers added to a complex that is flat in the photo.",
+   "severity": 4,
+   "type": "invented_landmark"
+  },
+  {
+   "box": [
+    9,
+    14,
+    166,
+    326
+   ],
+   "note": "Dry dirt field depicted as a bright green lawn.",
+   "severity": 3,
+   "type": "wrong_ground"
+  }
+ ],
+ "4,0": [
+  {
+   "box": [
+    372,
+    785,
+    453,
+    855
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "A gothic church with spires was added where the photo shows standard low-rise buildings."
+  }
+ ],
+ "5,0": [],
+ "-5,-1": [
+  {
+   "box": [
+    0,
+    68,
+    60,
+    210
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Large classical building drawn where photo shows modest residential parcels."
+  },
+  {
+   "box": [
+    420,
+    305,
+    485,
+    355
+   ],
+   "type": "wrong_size",
+   "severity": 3,
+   "note": "Tall brown towers drawn over low single-story industrial rooftops."
+  },
+  {
+   "box": [
+    95,
+    620,
+    190,
+    735
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Modern white arena rendered as an ancient stone amphitheater."
+  }
+ ],
+ "-4,-1": [
+  {
+   "box": [
+    743,
+    0,
+    964,
+    207
+   ],
+   "type": "wrong_ground",
+   "severity": 4,
+   "note": "Barren dirt ground replaced by lush green lawn"
+  },
+  {
+   "box": [
+    136,
+    654,
+    246,
+    803
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Dry dirt lot drawn with vibrant green lawn areas"
+  },
+  {
+   "box": [
+    852,
+    230,
+    1000,
+    516
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Arid ground beneath trees depicted as green turf"
+  }
+ ],
+ "-3,-1": [
+  {
+   "box": [
+    390,
+    295,
+    484,
+    388
+   ],
+   "note": "Large twin-towered cathedral inserted where only standard low-rise residential rooftops exist.",
+   "severity": 4,
+   "type": "invented_landmark"
+  }
+ ],
+ "3,-1": [],
+ "4,-1": [
+  {
+   "box": [
+    349,
+    850,
+    427,
+    955
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "A sports stadium was added where Image 1 shows a flat commercial lot."
+  },
+  {
+   "box": [
+    287,
+    259,
+    410,
+    296
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "A tall observation or minaret tower was added over residential lots."
+  },
+  {
+   "box": [
+    342,
+    715,
+    427,
+    796
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "A domed church structure was added where only ordinary low-rise houses exist."
+  }
+ ],
+ "5,-1": [
+  {
+   "box": [
+    600,
+    490,
+    660,
+    1000
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Drawn as a wide brown river with bridges, whereas the photo shows dry ground and tracks."
+  },
+  {
+   "box": [
+    660,
+    0,
+    770,
+    270
+   ],
+   "type": "missing_structure",
+   "severity": 3,
+   "note": "A brown waterway replaces streets and residential structures present in the photo."
+  },
+  {
+   "box": [
+    270,
+    560,
+    510,
+    860
+   ],
+   "type": "wrong_ground",
+   "severity": 2,
+   "note": "Contains a dark charred texture, whereas the photo shows a plain unburnt dirt lot."
+  }
+ ],
+ "-5,-2": [
+  {
+   "box": [
+    95,
+    574,
+    190,
+    730
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Rendered as a single long continuous building instead of a row of individual modular homes."
+  },
+  {
+   "box": [
+    0,
+    720,
+    150,
+    990
+   ],
+   "type": "missing_structure",
+   "severity": 2,
+   "note": "Parked train cars along the rail tracks are omitted."
+  },
+  {
+   "box": [
+    178,
+    222,
+    225,
+    252
+   ],
+   "type": "invented_landmark",
+   "severity": 2,
+   "note": "Depicts a vertical spire/tower where only low residential structures exist."
+  }
+ ],
+ "-4,-2": [
+  {
+   "box": [
+    90,
+    110,
+    170,
+    160
+   ],
+   "type": "missing_structure",
+   "severity": 4,
+   "note": "Prominent monument tower present in the photo is missing."
+  },
+  {
+   "box": [
+    0,
+    160,
+    88,
+    365
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Rendered as open fields instead of urban blocks and buildings."
+  },
+  {
+   "box": [
+    305,
+    188,
+    482,
+    500
+   ],
+   "type": "wrong_ground",
+   "severity": 3,
+   "note": "Drawn as a uniform green lawn rather than plowed agricultural plots."
+  }
+ ],
+ "-3,-2": [],
+ "-2,-2": [
+  {
+   "box": [
+    604,
+    605,
+    767,
+    883
+   ],
+   "note": "A green regulation soccer field was added over what is an unpaved dirt lot in the photo.",
+   "severity": 3,
+   "type": "invented_landmark"
+  }
+ ],
+ "-1,-2": [],
+ "0,-2": [],
+ "1,-2": [],
+ "2,-2": [
+  {
+   "box": [
+    198,
+    362,
+    388,
+    608
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Cathedral and paved plaza replace an empty dirt field."
+  },
+  {
+   "box": [
+    660,
+    442,
+    813,
+    622
+   ],
+   "type": "invented_landmark",
+   "severity": 4,
+   "note": "Second cathedral complex drawn over residential and industrial lots."
+  },
+  {
+   "box": [
+    287,
+    725,
+    452,
+    862
+   ],
+   "type": "invented_landmark",
+   "severity": 3,
+   "note": "Stadium and freestanding tower added instead of commercial warehouses."
+  }
+ ],
+ "3,-2": [
+  {
+   "box": [
+    183,
+    326,
+    278,
+    477
+   ],
+   "type": "wrong_architecture",
+   "severity": 3,
+   "note": "Dense residential houses are replaced with two large, contiguous red industrial-style buildings."
+  }
+ ],
+ "4,-2": [],
+ "5,-2": []
+}

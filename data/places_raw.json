@@ -1,0 +1,1660 @@
+[
+ {
+  "query": "Catedral Basílica de León Guanajuato",
+  "id": "ChIJBZalkgy_K4QRVuYr3dB-Vvk",
+  "types": [
+   "tourist_attraction",
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Álvaro Obregón 112, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.123889899999998,
+   "longitude": -101.6820755
+  },
+  "rating": 4.8,
+  "websiteUri": "https://www.facebook.com/leongtocatedral",
+  "userRatingCount": 8613,
+  "displayName": {
+   "text": "Catedral - Basílica Metropolitana de Nuestra Madre Santísima de la Luz",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Basílica católica del siglo XVIII de estilo neoclásico, con 2 torres, 2 cúpulas y varias capillas.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Arco de la Calzada León",
+  "id": "ChIJ0w395ge_K4QROAaXWoo-KEs",
+  "types": [
+   "monument",
+   "tourist_attraction",
+   "park",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. Calz. de los Heroes 104, Centro, 37370 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1189143,
+   "longitude": -101.6720611
+  },
+  "rating": 4.8,
+  "userRatingCount": 22176,
+  "displayName": {
+   "text": "Arco Triunfal de la Calzada de los Héroes",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Monumento",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Arco de león de fines del siglo XIX para conmemorar la independencia, rodeado de fuentes y estatuas.",
+   "languageCode": "es-419"
+  }
+ },
+ {
+  "query": "Templo Expiatorio León Guanajuato",
+  "id": "ChIJIQxnaAi_K4QRtZo_plI6TOY",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. Francisco I. Madero 721, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.120323799999998,
+   "longitude": -101.6747408
+  },
+  "rating": 4.8,
+  "websiteUri": "https://elsagradocorazon.org/templo-expiatorio-diocesano-del-sagrado-corazon-de-jesus/",
+  "userRatingCount": 25233,
+  "displayName": {
+   "text": "Templo Expiatorio del Sagrado Corazón de Jesús",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Iglesia neogótica construida entre 1921 y 2013 que alberga un santuario con mucha luz y catacumbas.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Teatro Manuel Doblado León",
+  "id": "ChIJxTr4dAy_K4QR7lvJDMd59TQ",
+  "types": [
+   "performing_arts_theater",
+   "event_venue",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Pedro Moreno, esquina con, Hermanos Aldama, Centro Histórico, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1230166,
+   "longitude": -101.68011100000001
+  },
+  "rating": 4.6,
+  "websiteUri": "http://institutoculturaldeleon.org.mx/icl/foros",
+  "userRatingCount": 6192,
+  "displayName": {
+   "text": "Teatro Manuel Doblado",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Teatro",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Edificio neoclásico del siglo XIX donde se realizan conciertos, obras de teatro y espectáculos de danza.",
+   "languageCode": "es-419"
+  }
+ },
+ {
+  "query": "Palacio Municipal de León Guanajuato",
+  "id": "ChIJOUfp2Gm-K4QRMGeC-zjljBo",
+  "types": [
+   "city_hall",
+   "local_government_office",
+   "government_office",
+   "point_of_interest",
+   "service",
+   "establishment"
+  ],
+  "formattedAddress": "Plaza Principal S/N, Juárez 102, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122001299999997,
+   "longitude": -101.68320899999999
+  },
+  "rating": 4.2,
+  "websiteUri": "https://www.leon.gob.mx/",
+  "userRatingCount": 1130,
+  "displayName": {
+   "text": "Edificio Municipal de León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Ayuntamiento",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Casa de las Monas León",
+  "id": "ChIJCQaiP5e-K4QRpznM_gUUkco",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "Casa de Las Monas, 37238 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.139414,
+   "longitude": -101.6286138
+  },
+  "displayName": {
+   "text": "Casa de Las Monas",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Plaza de los Fundadores León",
+  "id": "ChIJf7Lypgy_K4QRQ-JELT2O58o",
+  "types": [
+   "tourist_attraction",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "J. Ortiz de Domínguez 102, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122878,
+   "longitude": -101.6831279
+  },
+  "rating": 4.6,
+  "userRatingCount": 3186,
+  "displayName": {
+   "text": "Plaza Fundadores",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Atracción turística",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Plaza Principal León Guanajuato",
+  "id": "ChIJo0WT-0uWK4QR8VqDe8TKC3Y",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "Principal, Los Lopez Sur, 37685 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.047699,
+   "longitude": -101.5758206
+  },
+  "displayName": {
+   "text": "Principal",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Parque Hidalgo León Guanajuato",
+  "id": "ChIJT6ZCz664K4QRq1o6rngKTto",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "Parque Hidalgo, Jardines del Campestre, 37128 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1706233,
+   "longitude": -101.7005084
+  },
+  "displayName": {
+   "text": "Parque Hidalgo",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Plaza Piel León",
+  "id": "ChIJwfGtbAC_K4QR_NDkjgnnfZ0",
+  "types": [
+   "shopping_mall",
+   "shoe_store",
+   "store",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Hilario Medina 101, Los Gavilanes, 37270 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.118830799999998,
+   "longitude": -101.6630107
+  },
+  "rating": 4.4,
+  "websiteUri": "https://www.facebook.com/PlazaPielLeon/",
+  "userRatingCount": 733,
+  "displayName": {
+   "text": "Plaza Piel",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Centro comercial",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Central de Autobuses León Guanajuato",
+  "id": "ChIJXQseLQC_K4QRaRmTwDvvVO0",
+  "types": [
+   "transportation_service",
+   "travel_agency",
+   "point_of_interest",
+   "service",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Hilario Medina S/N, Españita, 37266 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.120956800000002,
+   "longitude": -101.6613634
+  },
+  "rating": 4.4,
+  "userRatingCount": 31215,
+  "displayName": {
+   "text": "Central de Autobuses León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Servicio de transporte",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Estadio León",
+  "id": "ChIJPTTNslW-K4QRYAsyTau75yo",
+  "types": [
+   "stadium",
+   "arena",
+   "sports_complex",
+   "sports_activity_location",
+   "event_venue",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Adolfo López Mateos 1810, La Martinica, 37500 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1155454,
+   "longitude": -101.65770289999999
+  },
+  "rating": 4.5,
+  "userRatingCount": 18201,
+  "displayName": {
+   "text": "Estadio León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Estadio",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Se trata del estadio de fútbol donde juega el Club León; además, se utilizó para los Juegos Olímpicos de 1968.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Forum Cultural Guanajuato",
+  "id": "ChIJj2Nn1rIB0oURny0m47uL9oo",
+  "types": [
+   "cultural_center",
+   "tourist_attraction",
+   "garden",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Prol, C. Calz. de los Heroes 908, La Martinica, 37500 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.115909000000002,
+   "longitude": -101.66051519999999
+  },
+  "rating": 4.8,
+  "userRatingCount": 8930,
+  "displayName": {
+   "text": "Forum Cultural Guanajuato",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Centro cultural",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Poliforum León",
+  "id": "ChIJDRvxH1e-K4QRyB-9279znG0",
+  "types": [
+   "convention_center",
+   "event_venue",
+   "service",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Adolfo López Mateos esquina Boulevard Francisco Villa s/n, Oriental, 37510 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.113962,
+   "longitude": -101.65468800000001
+  },
+  "rating": 4.7,
+  "websiteUri": "https://www.poliforumleon.com.mx/",
+  "userRatingCount": 7776,
+  "displayName": {
+   "text": "Poliforum León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Recinto para eventos",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de los Ángeles León Guanajuato",
+  "id": "ChIJPbME3Ay_K4QRVWbeqOPQMi4",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. 20 de Enero 233, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.125309700000003,
+   "longitude": -101.6830088
+  },
+  "rating": 4.5,
+  "userRatingCount": 78,
+  "displayName": {
+   "text": "Templo de Nuestra Señora de los Ángeles",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Mercado Aldama León",
+  "id": "ChIJt5SKbwy_K4QRUzGpxZVsiGE",
+  "types": [
+   "market",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Mercado Aldama, local #74, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1223708,
+   "longitude": -101.6862115
+  },
+  "rating": 4.3,
+  "userRatingCount": 15832,
+  "displayName": {
+   "text": "Mundo pañal Mercado Aldama",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Mercado",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de San Juan de Dios León Guanajuato",
+  "id": "ChIJizrWCwq_K4QRNDo_9o3A3Nc",
+  "types": [
+   "tourist_attraction",
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Plaza Revolución 105, San Juan de Dios, 37004 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.117095499999998,
+   "longitude": -101.6793429
+  },
+  "rating": 4.7,
+  "websiteUri": "https://www.facebook.com/Templo-de-San-Juan-de-Dios-110168477358431/",
+  "userRatingCount": 1393,
+  "displayName": {
+   "text": "Templo San Juan de Dios",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Iglesia de la época colonial, con una fachada decorativa con impactos de bala de la Revolución mexicana de la década de 1910.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Museo de Arte e Historia de Guanajuato León",
+  "id": "ChIJlRYuPlW-K4QRZvYoZ9m8qso",
+  "types": [
+   "museum",
+   "tourist_attraction",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Prol, C. Calz. de los Heroes 908, La Martinica, 37500 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.116640099999998,
+   "longitude": -101.6599712
+  },
+  "rating": 4.8,
+  "websiteUri": "https://forumcultural.guanajuato.gob.mx/mahg/",
+  "userRatingCount": 9613,
+  "displayName": {
+   "text": "Museo de Arte e Historia de Guanajuato",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Museo",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Museo de Arte e Historia con arquitectura notable, esculturas mexicanas y exposiciones de la cultura regional.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Teatro del Bicentenario León",
+  "id": "ChIJP7fFyFS-K4QRfzz--qpgEyY",
+  "types": [
+   "performing_arts_theater",
+   "event_venue",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. Calz. de los Heroes 908, La Martinica, 37500 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1141219,
+   "longitude": -101.66053380000001
+  },
+  "rating": 4.9,
+  "websiteUri": "http://teatrodelbicentenario.com/",
+  "userRatingCount": 3763,
+  "displayName": {
+   "text": "Teatro del Bicentenario",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Teatro",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Plaza Mayor León",
+  "id": "ChIJyblzFUe_K4QReTf1BS46HRM",
+  "types": [
+   "shopping_mall",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Juan Alonso de Torres Pte. 2002, Valle del Campestre, 37150 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1578039,
+   "longitude": -101.6951947
+  },
+  "rating": 4.6,
+  "websiteUri": "https://www.plazamayor.com.mx/",
+  "userRatingCount": 45788,
+  "displayName": {
+   "text": "Plaza Mayor",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Centro comercial",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Centro comercial extenso, con tiendas de marca, restaurantes y cafeterías alrededor de un patio al aire libre.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Calzada de los Héroes León",
+  "id": "ChIJYdwNgwe_K4QRvlzWS8b0Quk",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "C. Calz. de los Heroes, León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1175381,
+   "longitude": -101.6652391
+  },
+  "displayName": {
+   "text": "Calle Calzada de los Heroes",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de la Tercera Orden León",
+  "id": "ChIJZ1sk8Ac_K4QRk-an9m8e4Ok",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Puebla, Centro, 37800 Dolores Hidalgo Cuna de la Independencia Nacional, Gto., México",
+  "location": {
+   "latitude": 21.1561996,
+   "longitude": -100.93468519999999
+  },
+  "rating": 4.6,
+  "userRatingCount": 130,
+  "displayName": {
+   "text": "Templo De La Tercera Orden",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Museo de las Identidades Leonesas",
+  "id": "ChIJDei1sXS_K4QRW-9mCmzkgUg",
+  "types": [
+   "museum",
+   "tourist_attraction",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Justo Sierra 202, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.121670200000004,
+   "longitude": -101.6846329
+  },
+  "rating": 4.7,
+  "websiteUri": "https://culturaleon.com/",
+  "userRatingCount": 914,
+  "displayName": {
+   "text": "Museo de las Identidades Leonesas (MIL)",
+   "languageCode": "en"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Museo",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Palacio de Gobierno León Guanajuato",
+  "id": "ChIJOUfp2Gm-K4QRMGeC-zjljBo",
+  "types": [
+   "city_hall",
+   "local_government_office",
+   "government_office",
+   "point_of_interest",
+   "service",
+   "establishment"
+  ],
+  "formattedAddress": "Plaza Principal S/N, Juárez 102, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122001299999997,
+   "longitude": -101.68320899999999
+  },
+  "rating": 4.2,
+  "websiteUri": "https://www.leon.gob.mx/",
+  "userRatingCount": 1130,
+  "displayName": {
+   "text": "Edificio Municipal de León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Ayuntamiento",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Parque Zoológico León",
+  "id": "ChIJ8fEcvB-5K4QRyRtIscjZbvU",
+  "types": [
+   "zoo",
+   "tourist_attraction",
+   "state_park",
+   "park",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Cam. A Ibarrilla KM 6, 37207 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1852847,
+   "longitude": -101.6525575
+  },
+  "rating": 4.5,
+  "websiteUri": "http://www.zooleon.org.mx/",
+  "userRatingCount": 26939,
+  "displayName": {
+   "text": "Parque Zoológico de León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Zoo",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Cientos de animales, además de atracciones como safaris, paseos en tren en miniatura y zonas de pícnic.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Barrio del Coecillo León",
+  "id": "ChIJccV1gwO_K4QRFAkKaMBxqHM",
+  "types": [
+   "sublocality_level_1",
+   "sublocality",
+   "political"
+  ],
+  "formattedAddress": "El Coecillo, 37260 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.125094,
+   "longitude": -101.6684071
+  },
+  "displayName": {
+   "text": "El Coecillo",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Barrio de San Miguel León Guanajuato",
+  "id": "ChIJXek3CNS_K4QRrPNBTeX3Kqs",
+  "types": [
+   "bar",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. Centenario, San Miguel, 37468 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1068847,
+   "longitude": -101.6805917
+  },
+  "rating": 4.4,
+  "userRatingCount": 23,
+  "displayName": {
+   "text": "El barrio de San Miguel León gto",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Bar",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Museo de la Ciudad León Guanajuato",
+  "id": "ChIJL_wtjsu_K4QR2LiaT3LoljY",
+  "types": [
+   "museum",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Pedro Moreno 227, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122970000000002,
+   "longitude": -101.67928889999999
+  },
+  "rating": 4.4,
+  "websiteUri": "http://www.museodelaciudaddeleon.org.mx/",
+  "userRatingCount": 17,
+  "displayName": {
+   "text": "Museo de la ciudad de León Guanajuato",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Museo",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Estación FEMSA León",
+  "id": "ChIJF9OPS60Yx4URN_5TH2lmlAg",
+  "types": [
+   "point_of_interest",
+   "service",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Adolfo López Mateos 2201, Las Bugambilias, 37270 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1173465,
+   "longitude": -101.6557806
+  },
+  "rating": 4.3,
+  "websiteUri": "http://www.femsa.com/es/negocios-femsa/coca-cola-femsa",
+  "userRatingCount": 479,
+  "displayName": {
+   "text": "Planta Leon Manufactura Coca Cola Femsa",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Servicios",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Mercado La Luz León",
+  "id": "ChIJX6ZCNPm_K4QRao-5t2kr1gA",
+  "types": [
+   "store",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. la Luz 164, El Coecillo, 37260 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.123416799999998,
+   "longitude": -101.67250729999999
+  },
+  "rating": 4.4,
+  "userRatingCount": 42,
+  "displayName": {
+   "text": "Mercado la luz",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Comercio",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de San Francisco León Guanajuato",
+  "id": "ChIJ5_ltqpu9K4QRyhisN1OPgrc",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "C. Templo de San Francisco, Villas de La Luz, 37295 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.0940049,
+   "longitude": -101.5802453
+  },
+  "displayName": {
+   "text": "Calle Templo de San Francisco",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Presidencia Municipal León",
+  "id": "ChIJOUfp2Gm-K4QRMGeC-zjljBo",
+  "types": [
+   "city_hall",
+   "local_government_office",
+   "government_office",
+   "service",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Plaza Principal S/N, Juárez 102, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122001299999997,
+   "longitude": -101.68320899999999
+  },
+  "rating": 4.2,
+  "websiteUri": "https://www.leon.gob.mx/",
+  "userRatingCount": 1130,
+  "displayName": {
+   "text": "Edificio Municipal de León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Ayuntamiento",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Plaza Expiatorio León",
+  "id": "ChIJzWZM_gi_K4QRMwPLW9GqiWw",
+  "types": [
+   "park",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Calle Gral. I. Zaragoza 124, Centro, 37000 Ejido del Centro, Gto., México",
+  "location": {
+   "latitude": 21.120078,
+   "longitude": -101.6752753
+  },
+  "rating": 4.8,
+  "userRatingCount": 2098,
+  "displayName": {
+   "text": "Plaza Expiatorio",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Parque",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Jardín de San Juan de Dios León",
+  "id": "ChIJHVcxE6m4K4QRM-uW3SbT-XA",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "Jdn. de San Juan de Dios, Jardines del Campestre, 37128 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1698124,
+   "longitude": -101.7030293
+  },
+  "displayName": {
+   "text": "Jardín de San Juan de Dios",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Portales de León Guanajuato",
+  "id": "ChIJx1DBxLK9K4QR6vGC8aVm-Bc",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "Portales, 37294 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122637,
+   "longitude": -101.5837008
+  },
+  "displayName": {
+   "text": "Portales",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Explanada Estadio León",
+  "id": "ChIJPTTNslW-K4QRYAsyTau75yo",
+  "types": [
+   "stadium",
+   "arena",
+   "event_venue",
+   "sports_complex",
+   "sports_activity_location",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Adolfo López Mateos 1810, La Martinica, 37500 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1155454,
+   "longitude": -101.65770289999999
+  },
+  "rating": 4.5,
+  "userRatingCount": 18201,
+  "displayName": {
+   "text": "Estadio León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Estadio",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Se trata del estadio de fútbol donde juega el Club León; además, se utilizó para los Juegos Olímpicos de 1968.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Universidad De La Salle Bajío",
+  "id": "ChIJnTCQy5q_K4QRjclYyR0FrBY",
+  "types": [
+   "university",
+   "educational_institution",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvrd Torres Landa Pte 1002, Las Americas, 37150 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.105935799999997,
+   "longitude": -101.6952128
+  },
+  "rating": 4.3,
+  "websiteUri": "https://www.lasallebajio.edu.mx/",
+  "userRatingCount": 119,
+  "displayName": {
+   "text": "Universidad De La Salle Bajío",
+   "languageCode": "es-419"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Universidad",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Hospital Aranda de la Parra León",
+  "id": "ChIJ2xA1-wy_K4QRQGWdfMocBE8",
+  "types": [
+   "general_hospital",
+   "hospital",
+   "health",
+   "point_of_interest",
+   "service",
+   "establishment"
+  ],
+  "formattedAddress": "M. Hidalgo 329, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.125588,
+   "longitude": -101.68158620000001
+  },
+  "rating": 3.6,
+  "websiteUri": "https://arandadelaparra.com.mx/",
+  "userRatingCount": 618,
+  "displayName": {
+   "text": "Hospital Aranda de la Parra",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Hospital",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Sanctuary Templo de Nuestra Señora de Guadalupe León",
+  "id": "ChIJcyCsuHO_K4QRvkJFHVWbmnY",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Florencio Antillón 403, Obrera, 37340 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1257353,
+   "longitude": -101.6881103
+  },
+  "rating": 4.8,
+  "userRatingCount": 419,
+  "displayName": {
+   "text": "Santuario de Nuestra Señora de Guadalupe",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Panteón de San Nicolás León",
+  "id": "ChIJf0mhs6a_K4QRlT9MMbasygA",
+  "types": [
+   "cemetery",
+   "service",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvr. Mariano Escobedo Pte. 601, San Nicolas, 37480 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1126614,
+   "longitude": -101.6776728
+  },
+  "rating": 4.4,
+  "userRatingCount": 665,
+  "displayName": {
+   "text": "Panteón San Nicolás",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Cementerio",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Calle Madero León Guanajuato",
+  "id": "ChIJ97Bmcwm_K4QR9zGlJNoGj78",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "C. Francisco I. Madero, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1206318,
+   "longitude": -101.6775316
+  },
+  "displayName": {
+   "text": "Calle Francisco I. Madero",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Zona Peatonal León Guanajuato",
+  "id": "ChIJS1R32Hq_K4QRR6uxembqBkQ",
+  "types": [
+   "plaza",
+   "garden",
+   "association_or_organization",
+   "park",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Portal Guerrero 16, Centro, 37000 Centro, Gto., México",
+  "location": {
+   "latitude": 21.1216993,
+   "longitude": -101.6823369
+  },
+  "rating": 4.6,
+  "websiteUri": "https://www.leon.gob.mx/",
+  "userRatingCount": 11180,
+  "displayName": {
+   "text": "Plaza Principal de León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Plaza",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Plaza urbana, rodeada de edificios históricos, con zonas decorativas de césped y setos, además de una fuente y un quiosco.",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Blvd Adolfo López Mateos León",
+  "id": "ChIJ4TBnsVq-K4QRaTOmrxoujM4",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "Blvd. Adolfo López Mateos, León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1174391,
+   "longitude": -101.6589325
+  },
+  "displayName": {
+   "text": "Boulevard Adolfo López Mateos",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Casa de la Cultura Diego Rivera León",
+  "id": "ChIJDXYVa2-_K4QR8P8L940GXRY",
+  "types": [
+   "cultural_center",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Portal Delicias, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1232638,
+   "longitude": -101.6829985
+  },
+  "rating": 4.7,
+  "userRatingCount": 85,
+  "displayName": {
+   "text": "Casa de la Cultura Diego Rivera",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Centro cultural",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Museo de Arte Sacro León",
+  "id": "ChIJKW2cmAy_K4QRZuytvSjDxFs",
+  "types": [
+   "museum",
+   "tourist_attraction",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "M. Hidalgo, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.124750199999998,
+   "longitude": -101.6818316
+  },
+  "rating": 4.4,
+  "websiteUri": "https://www.facebook.com/Museo-de-Arte-Sacro-Leon-273212333590856/",
+  "userRatingCount": 97,
+  "displayName": {
+   "text": "Museo de Arte Sacro de León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Museo",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Mercado Aldama León Guanajuato",
+  "id": "ChIJt5SKbwy_K4QRUzGpxZVsiGE",
+  "types": [
+   "market",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Mercado Aldama, local #74, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1223708,
+   "longitude": -101.6862115
+  },
+  "rating": 4.3,
+  "userRatingCount": 15832,
+  "displayName": {
+   "text": "Mundo pañal Mercado Aldama",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Mercado",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de San Francisco del Coecillo León",
+  "id": "ChIJQQRHPwS_K4QRdaJtiueWzvc",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. Héroes de la Independencia 501, El Coecillo, 37260 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.125106799999998,
+   "longitude": -101.6680756
+  },
+  "rating": 4.7,
+  "userRatingCount": 836,
+  "displayName": {
+   "text": "Templo de San Francisco de Asís",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo del Inmaculado Corazón de María Barrio Arriba León",
+  "id": "ChIJW1YfuAy_K4QRbhMoLNXqZak",
+  "types": [
+   "church",
+   "place_of_worship",
+   "point_of_interest",
+   "association_or_organization",
+   "establishment"
+  ],
+  "formattedAddress": "C. 20 de Enero 208, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1240074,
+   "longitude": -101.68329279999999
+  },
+  "rating": 4.7,
+  "userRatingCount": 546,
+  "displayName": {
+   "text": "Templo del Inmaculado Corazón de María",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Zona Peatonal Madero León",
+  "id": "ChIJvxdlJ0S_K4QR_13XKJ7AflA",
+  "types": [
+   "tourist_attraction",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.121851,
+   "longitude": -101.6825246
+  },
+  "rating": 4.7,
+  "userRatingCount": 850,
+  "displayName": {
+   "text": "Centro Histórico",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Atracción turística",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Plaza del Mariachi León Guanajuato",
+  "id": "ChIJAQAAc2m_K4QR5hlZyQ4_twQ",
+  "types": [
+   "park",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Plaza Jardin Morelos H. Ayuntamiento León Morelo s, Moderna, 37328 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.136183400000004,
+   "longitude": -101.6909963
+  },
+  "rating": 4.3,
+  "userRatingCount": 1314,
+  "displayName": {
+   "text": "Plaza del Mariachi",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Parque",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Parroquia del Sagrario León Guanajuato",
+  "id": "ChIJ44LTXgu_K4QRCPhCdFLMfk8",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Portal Hidalgo y, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122406200000004,
+   "longitude": -101.683025
+  },
+  "rating": 4.6,
+  "userRatingCount": 142,
+  "displayName": {
+   "text": "Parroquia del Sagrario",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de San Nicolás León Guanajuato",
+  "id": "ChIJOx5aoBO_K4QRC7OuXmL5IfU",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. Aquiles Serdán 232, Obregon, 37320 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1328964,
+   "longitude": -101.68108
+  },
+  "rating": 4.5,
+  "userRatingCount": 66,
+  "displayName": {
+   "text": "San Nicolás de Tolentino",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Estación Delta SIT León",
+  "id": "ChIJE1qe-wq-K4QRGxrcdOhSNcM",
+  "types": [
+   "local_government_office",
+   "transportation_service",
+   "point_of_interest",
+   "association_or_organization",
+   "government_office",
+   "establishment"
+  ],
+  "formattedAddress": "Anden B, Aureola 401, Fracciones de Santa Julia, 37290 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.0952849,
+   "longitude": -101.61821529999999
+  },
+  "rating": 3.8,
+  "userRatingCount": 4073,
+  "displayName": {
+   "text": "Estación De Transferencia Delta",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Asociación u organización",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Casa de Cultura Efrén Hernández León",
+  "id": "ChIJQyteSCK_K4QRsdbDvCDNrr4",
+  "types": [
+   "cultural_center",
+   "school",
+   "educational_institution",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Monte de Las Cruces 402, Hidalgo, 37220 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.143445,
+   "longitude": -101.66867889999999
+  },
+  "rating": 4.4,
+  "userRatingCount": 67,
+  "displayName": {
+   "text": "Casa de la cultura Efren Hernandez",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Centro cultural",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de San Sebastián León Guanajuato",
+  "id": "ChIJ0wpsAZq9K4QRkcUtuGWc4po",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "C. Templo de San Sebastian, Villas de La Luz, 37295 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.0934242,
+   "longitude": -101.5807758
+  },
+  "displayName": {
+   "text": "Calle Templo de San Sebastian",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Museo Casa Bugambilias León",
+  "id": "ChIJt0xGL1a-K4QRY5YNQCpyr_c",
+  "types": [
+   "restaurant",
+   "food",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Mayas 306, Las Bugambilias, 37270 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1183721,
+   "longitude": -101.6533934
+  },
+  "rating": 4.7,
+  "userRatingCount": 34,
+  "displayName": {
+   "text": "Casa Bugambilias",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Restaurante",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Colegio de Guanajuato León",
+  "id": "ChIJJSOQCZW_K4QRbC2W5jeEpzg",
+  "types": [
+   "school",
+   "educational_institution",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Calle Independencia, San Miguel, 37460 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.0981524,
+   "longitude": -101.68504689999999
+  },
+  "rating": 4.2,
+  "userRatingCount": 158,
+  "displayName": {
+   "text": "Colegio Guanajuato",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Escuela",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de Nuestra Señora del Refugio León Guanajuato",
+  "id": "ChIJz8z74azAK4QRPpvYJii-V0k",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Molino de Las Flores 209, Bosques del Refugio, 37123 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1595826,
+   "longitude": -101.71525989999999
+  },
+  "rating": 4.6,
+  "userRatingCount": 184,
+  "displayName": {
+   "text": "Templo de Nuestra Señora del Refugio",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Mercado Comonfort León",
+  "id": "ChIJA6WhmHS_K4QR6eDFnY-QXd4",
+  "types": [
+   "market",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Ignacio Comonfort 205, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1211792,
+   "longitude": -101.6857344
+  },
+  "rating": 4.2,
+  "userRatingCount": 5002,
+  "displayName": {
+   "text": "Mercado Comonfort Zapatero",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Mercado",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Plaza San Juan de Dios León",
+  "id": "ChIJHVcxE6m4K4QRM-uW3SbT-XA",
+  "types": [
+   "route"
+  ],
+  "formattedAddress": "Jdn. de San Juan de Dios, Jardines del Campestre, 37128 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1698124,
+   "longitude": -101.7030293
+  },
+  "displayName": {
+   "text": "Jardín de San Juan de Dios",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Parque Chapalita León Guanajuato",
+  "id": "ChIJAR6WRXu_K4QRq7zwA0ulu7I",
+  "types": [
+   "city_park",
+   "park",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Campeche, Chapalita, 37340 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.125396300000002,
+   "longitude": -101.70032479999999
+  },
+  "rating": 4.4,
+  "userRatingCount": 1876,
+  "displayName": {
+   "text": "Parque Chapalita",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Parque local",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Estación FEMSA Coca Cola León",
+  "id": "ChIJF9OPS60Yx4URN_5TH2lmlAg",
+  "types": [
+   "service",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Adolfo López Mateos 2201, Las Bugambilias, 37270 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1173465,
+   "longitude": -101.6557806
+  },
+  "rating": 4.3,
+  "userRatingCount": 479,
+  "displayName": {
+   "text": "Planta Leon Manufactura Coca Cola Femsa",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Servicios",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Palacio Municipal León Guanajuato ayuntamiento",
+  "id": "ChIJOUfp2Gm-K4QRMGeC-zjljBo",
+  "types": [
+   "city_hall",
+   "local_government_office",
+   "government_office",
+   "service",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Plaza Principal S/N, Juárez 102, Centro, 37000 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.122001299999997,
+   "longitude": -101.68320899999999
+  },
+  "rating": 4.2,
+  "userRatingCount": 1130,
+  "displayName": {
+   "text": "Edificio Municipal de León",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Ayuntamiento",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Templo de Santa Ana León Guanajuato",
+  "id": "ChIJuXqolhiRK4QRgyrSW0Qvrgk",
+  "types": [
+   "church",
+   "place_of_worship",
+   "association_or_organization",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "De la Conquista 20, 37680 Álvaro Obregón, Gto., México",
+  "location": {
+   "latitude": 20.958474,
+   "longitude": -101.5781135
+  },
+  "rating": 4.6,
+  "userRatingCount": 54,
+  "displayName": {
+   "text": "Templo de Nuestra Señora Santa Ana",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Iglesia",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Explanada de la Feria León",
+  "id": "ChIJi0z99lO-K4QRfH79nzqXOI4",
+  "types": [
+   "cultural_center",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "Blvd. Adolfo López Mateos, Zona Recreativa y Cultural, 37500 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.115476100000002,
+   "longitude": -101.65549539999999
+  },
+  "rating": 4.6,
+  "userRatingCount": 7777,
+  "displayName": {
+   "text": "Patronato de la Feria Estatal De León y Parque Ecológico",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Centro cultural",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Parque Metropolitano",
+  "id": "ChIJ66P63rG4K4QR_d8TEZGzcU4",
+  "types": [
+   "sublocality_level_1",
+   "sublocality",
+   "political"
+  ],
+  "formattedAddress": "Parque Metropolitano, León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1706149,
+   "longitude": -101.6952881
+  },
+  "displayName": {
+   "text": "Parque Metropolitano",
+   "languageCode": "es"
+  }
+ },
+ {
+  "query": "Arco de la Calzada León",
+  "id": "ChIJ0w395ge_K4QROAaXWoo-KEs",
+  "types": [
+   "monument",
+   "tourist_attraction",
+   "park",
+   "point_of_interest",
+   "establishment"
+  ],
+  "formattedAddress": "C. Calz. de los Heroes 104, Centro, 37370 León de los Aldama, Gto., México",
+  "location": {
+   "latitude": 21.1189143,
+   "longitude": -101.6720611
+  },
+  "rating": 4.8,
+  "userRatingCount": 22176,
+  "displayName": {
+   "text": "Arco Triunfal de la Calzada de los Héroes",
+   "languageCode": "es"
+  },
+  "primaryTypeDisplayName": {
+   "text": "Monumento",
+   "languageCode": "es"
+  },
+  "editorialSummary": {
+   "text": "Arco de león de fines del siglo XIX para conmemorar la independencia, rodeado de fuentes y estatuas.",
+   "languageCode": "es-419"
+  }
+ }
+]

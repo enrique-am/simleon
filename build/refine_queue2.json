@@ -1,0 +1,572 @@
+[
+ {
+  "sq": [
+   -5,
+   4
+  ],
+  "box": [
+   870,
+   378,
+   1187,
+   594
+  ],
+  "type": "wrong_size",
+  "severity": 3,
+  "note": "Rendered as a large multi-wing complex, whereas the photo shows only two small, modest buildings. Redraw the building at its true size and height relative to the surrounding houses, matching the close-up.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   4
+  ],
+  "box": [
+   311,
+   186,
+   773,
+   435
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Salvage yard full of scrap cars is depicted as a striped commercial parking lot. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   4
+  ],
+  "box": [
+   256,
+   512,
+   2048,
+   1355
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Dry ditch and ravine bottom drawn with a continuous bright green strip instead of dry terrain with patchy scrub. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   4
+  ],
+  "box": [
+   0,
+   650,
+   314,
+   909
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Vacant dirt lot in photo is depicted as a green manicured lawn. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   4
+  ],
+  "box": [
+   767,
+   1407,
+   1008,
+   1651
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A large twin-towered church is drawn where the photo shows standard low-rise residential houses. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   1,
+   4
+  ],
+  "box": [
+   1367,
+   519,
+   1794,
+   806
+  ],
+  "type": "wrong_architecture",
+  "severity": 4,
+  "note": "Commercial building rendered as an open sports stadium with a pitch. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   2,
+   4
+  ],
+  "box": [
+   836,
+   517,
+   1168,
+   817
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A large church with twin towers is drawn in the central field where the photo shows only open dry land. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   3,
+   4
+  ],
+  "box": [
+   0,
+   1474,
+   1078,
+   2048
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Entire street grid and buildings drawn over what is an obscured/cut-off corner in the photo. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -3,
+   3
+  ],
+  "box": [
+   358,
+   1447,
+   698,
+   1749
+  ],
+  "type": "wrong_ground",
+  "severity": 4,
+  "note": "Vacant dirt lot replaced by a manicured green park with an estate. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   3
+  ],
+  "box": [
+   1292,
+   372,
+   1612,
+   608
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "An invented soccer stadium is depicted where the photo shows an open dirt and paved lot. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   3
+  ],
+  "box": [
+   682,
+   1707,
+   1060,
+   2048
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Image 2 shows a stadium with a field and dome, where Image 1 has a white industrial warehouse. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   5,
+   3
+  ],
+  "box": [
+   1658,
+   251,
+   1912,
+   535
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large cathedral added in an open, empty field. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   5,
+   3
+  ],
+  "box": [
+   362,
+   844,
+   571,
+   1047
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large church drawn over dense residential buildings. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   2
+  ],
+  "box": [
+   1514,
+   1119,
+   1733,
+   1356
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large twin-towered cathedral with dome drawn over residential lots and vacant land. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   1
+  ],
+  "box": [
+   962,
+   579,
+   1345,
+   915
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large cathedral added over standard residential blocks. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   1
+  ],
+  "box": [
+   1351,
+   462,
+   1839,
+   827
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Stadium and sports complex constructed over an empty lot. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   4,
+   1
+  ],
+  "box": [
+   534,
+   1261,
+   849,
+   1520
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A twin-towered cathedral is depicted where the photo shows a modern red-roofed commercial structure. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -5,
+   0
+  ],
+  "box": [
+   1858,
+   1102,
+   2048,
+   1326
+  ],
+  "type": "wrong_ground",
+  "severity": 4,
+  "note": "Dense urban blocks replaced with blank empty ground. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   0
+  ],
+  "box": [
+   1303,
+   1421,
+   1526,
+   1670
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A twin-towered church is depicted where the aerial photo shows a flat-roofed complex. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -3,
+   0
+  ],
+  "box": [
+   962,
+   799,
+   1191,
+   1000
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large twin-towered church added where regular low-rise buildings exist in the photo. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   3,
+   0
+  ],
+  "box": [
+   1132,
+   853,
+   1427,
+   1151
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large church towers added to a complex that is flat in the photo. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   4,
+   0
+  ],
+  "box": [
+   1579,
+   741,
+   1779,
+   947
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A gothic church with spires was added where the photo shows standard low-rise buildings. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -5,
+   -1
+  ],
+  "box": [
+   104,
+   0,
+   464,
+   168
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large classical building drawn where photo shows modest residential parcels. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   -1
+  ],
+  "box": [
+   0,
+   1467,
+   474,
+   2028
+  ],
+  "type": "wrong_ground",
+  "severity": 4,
+  "note": "Barren dirt ground replaced by lush green lawn Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -3,
+   -1
+  ],
+  "box": [
+   581,
+   775,
+   817,
+   1014
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large twin-towered cathedral inserted where only standard low-rise residential rooftops exist. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   4,
+   -1
+  ],
+  "box": [
+   1714,
+   694,
+   1981,
+   894
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A sports stadium was added where Image 1 shows a flat commercial lot. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   4,
+   -1
+  ],
+  "box": [
+   468,
+   557,
+   668,
+   869
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A tall observation or minaret tower was added over residential lots. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -4,
+   -2
+  ],
+  "box": [
+   175,
+   164,
+   375,
+   367
+  ],
+  "type": "missing_structure",
+  "severity": 4,
+  "note": "Prominent monument tower present in the photo is missing. Add the structure that the photo shows there, at the same footprint and height.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   2,
+   -2
+  ],
+  "box": [
+   680,
+   358,
+   1305,
+   841
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Cathedral and paved plaza replace an empty dirt field. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   2,
+   -2
+  ],
+  "box": [
+   860,
+   1314,
+   1318,
+   1702
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Second cathedral complex drawn over residential and industrial lots. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ }
+]

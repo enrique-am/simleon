@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SimLeón</title>
+<meta name="description" content="León, Guanajuato, dibujado como un mapa isométrico en pixel art al estilo de SimCity 2000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#0f1420;            /* night ground behind the map */
+  --panel:#b9c3d3;         /* SC2K steel-blue window chrome */
+  --panel-2:#dbe2ec;       /* raised face */
+  --panel-3:#8d99ad;       /* sunken / shadow */
+  --panel-ink:#141a26;
+  --ink:#1b2130; --ink-2:#4a5364; --ink-3:#7a8497;
+  --paper:#f3f1ea;         /* card interior */
+  --roof:#c8553d;          /* terracotta – León's roofs, the accent */
+  --gold:#d9a441;          /* cathedral stone */
+  --grass:#4e9a3d; --asphalt:#6d6f73; --sky:#3d6fb4;
+  --focus:#ffd23f;
+  --shadow:0 2px 0 var(--panel-3), 0 4px 12px rgba(0,0,0,.35);
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --pixel:'Press Start 2P','IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45;overflow:hidden}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:1px}
+
+/* ---- window chrome ---- */
+.app{position:fixed;inset:0;display:grid;grid-template-rows:auto 1fr auto;grid-template-columns:1fr 320px}
+.titlebar{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:6px 10px;background:var(--panel);border-bottom:2px solid var(--panel-3);box-shadow:inset 0 1px 0 var(--panel-2)}
+.titlebar h1{margin:0;font-family:var(--pixel);font-size:14px;letter-spacing:.5px;color:var(--panel-ink);text-shadow:1px 1px 0 var(--panel-2)}
+.titlebar h1 span{color:var(--roof)}
+.titlebar .sub{font-size:12.5px;color:var(--ink-2)}
+.titlebar .spacer{flex:1}
+.tb{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;background:var(--panel-2);border:2px solid;border-color:#fff var(--panel-3) var(--panel-3) #fff;color:var(--panel-ink);font-size:12.5px;font-weight:500}
+.tb:active,.tb[aria-pressed="true"]{border-color:var(--panel-3) #fff #fff var(--panel-3);background:var(--panel)}
+.tb kbd{font-family:var(--mono);font-size:11px;padding:0 4px;background:var(--panel);border:1px solid var(--panel-3)}
+.story-link{color:var(--panel-ink);text-decoration:none}
+
+/* ---- map ---- */
+#map{position:relative;background:var(--bg);overflow:hidden}
+#osd{position:absolute;inset:0}
+#osd canvas{image-rendering:pixelated;image-rendering:crisp-edges}
+.compass{position:absolute;left:12px;top:12px;width:64px;height:64px;pointer-events:none}
+.scalebar{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:11px;color:#e6e9f0;background:rgba(15,20,32,.7);padding:3px 6px;border:1px solid var(--panel-3)}
+.scalebar i{display:block;height:4px;border:2px solid #e6e9f0;border-top:none;margin-bottom:3px}
+/* report mode */
+#map.reporting #osd{cursor:crosshair}
+.rep-layer{position:absolute;inset:0;display:none;z-index:5}
+#map.reporting .rep-layer{display:block}
+.rep-rect{position:absolute;border:2px dashed var(--focus);background:rgba(255,210,63,.15);pointer-events:none}
+.rep-form{position:absolute;z-index:6;width:280px;background:var(--paper);border:2px solid;border-color:#fff var(--panel-3) var(--panel-3) #fff;box-shadow:var(--shadow);padding:10px;font-size:13px;display:none}
+.rep-form.on{display:block}
+.rep-form h4{margin:0 0 6px;font-family:var(--pixel);font-size:8px;color:var(--roof);text-transform:uppercase}
+.rep-form select,.rep-form textarea{width:100%;font:inherit;font-size:13px;margin-bottom:6px;padding:5px;border:1px solid var(--panel-3);background:#fff;color:var(--ink)}
+.rep-form textarea{height:56px;resize:vertical}
+.rep-form .row{display:flex;gap:6px;justify-content:flex-end}
+.rep-form .meta{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-bottom:6px}
+.rep-pin{position:absolute;border:2px solid var(--focus);background:rgba(255,210,63,.12);pointer-events:none}
+.rep-pin.done{border-color:var(--grass);background:rgba(78,154,61,.12)}
+.rep-pin span{position:absolute;left:0;top:-16px;font-family:var(--mono);font-size:10px;background:var(--focus);color:#000;padding:0 4px;white-space:nowrap}
+.rep-pin.done span{background:var(--grass);color:#fff}
+.toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:8px 14px;font-size:13px;border:1px solid var(--panel-3);z-index:7;display:none}
+.toast.on{display:block}
+.zoombtns{position:absolute;right:12px;top:12px;display:flex;flex-direction:column;gap:4px}
+.zoombtns .tb{width:34px;height:34px;justify-content:center;font-family:var(--pixel);font-size:12px;padding:0}
+.hint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(15,20,32,.78);color:#e6e9f0;padding:6px 12px;font-size:12.5px;border:1px solid var(--panel-3);pointer-events:none;transition:opacity .4s}
+.hint.gone{opacity:0}
+
+/* markers */
+.mk{position:absolute;transform:translate(-50%,-100%);cursor:pointer;pointer-events:auto}
+.mk .pin{display:block;width:14px;height:14px;margin:0 auto;background:var(--c,var(--roof));border:2px solid #fff;box-shadow:2px 2px 0 rgba(0,0,0,.5);image-rendering:pixelated}
+.mk .stem{display:block;width:2px;height:8px;margin:0 auto;background:#fff;box-shadow:2px 0 0 rgba(0,0,0,.5)}
+.mk .lbl{position:absolute;left:50%;top:-4px;transform:translate(-50%,-100%);white-space:nowrap;font-family:var(--pixel);font-size:8px;line-height:1;padding:5px 6px;color:#fff;background:rgba(15,20,32,.85);border:1px solid var(--c,var(--roof));display:none}
+.labels-on .mk .lbl{display:block}
+.mk:hover .lbl,.mk.active .lbl{display:block}
+.mk.active .pin{background:var(--focus);border-color:var(--ink)}
+.sq-id{position:absolute;font-family:var(--mono);font-size:11px;color:#fff;background:rgba(200,85,61,.85);padding:2px 5px;pointer-events:none;transform:translate(-50%,-50%)}
+.sq-box{position:absolute;border:1px dashed rgba(255,255,255,.5);pointer-events:none}
+
+/* ---- side panel ---- */
+.side{background:var(--panel);border-left:2px solid var(--panel-3);display:flex;flex-direction:column;min-height:0}
+.side .sec{padding:10px 12px;border-bottom:2px solid var(--panel-3);box-shadow:inset 0 1px 0 var(--panel-2)}
+.side h2{margin:0 0 8px;font-family:var(--pixel);font-size:9px;letter-spacing:.5px;color:var(--ink-2);text-transform:uppercase}
+.search{display:flex;gap:6px}
+.search input{flex:1;font:inherit;padding:6px 8px;border:2px solid;border-color:var(--panel-3) #fff #fff var(--panel-3);background:var(--paper);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.chip{font-size:11px;padding:2px 7px;border:1px solid var(--panel-3);background:var(--panel-2);color:var(--ink-2)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip b{display:inline-block;width:8px;height:8px;margin-right:4px;vertical-align:-1px}
+#nav{width:100%;aspect-ratio:11/7;border:2px solid;border-color:var(--panel-3) #fff #fff var(--panel-3);background:var(--bg)}
+#nav .navigator{border:none!important}
+.list{flex:1;overflow:auto;background:var(--paper);min-height:0}
+.list button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;padding:8px 12px;border:0;border-bottom:1px solid #e2ded2;background:transparent;color:var(--ink)}
+.list button:hover{background:#ebe7dc}
+.list button b{flex:none;width:10px;height:10px;background:var(--c,var(--roof));border:1px solid rgba(0,0,0,.4)}
+.list button small{margin-left:auto;color:var(--ink-3);font-size:11px;white-space:nowrap}
+.list .empty{padding:14px 12px;color:var(--ink-3)}
+.card{background:var(--paper);padding:12px;display:none;max-height:45%;overflow:auto;border-bottom:2px solid var(--panel-3)}
+.card.on{display:block}
+.card .cat{font-family:var(--pixel);font-size:8px;color:var(--c,var(--roof));text-transform:uppercase;letter-spacing:.5px}
+.card h3{margin:4px 0 6px;font-size:16px;line-height:1.25;text-wrap:balance}
+.card p{margin:0 0 8px;font-size:13.5px}
+.card .meta{display:flex;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+.card a{color:var(--sky)}
+.card .close{float:right;background:none;border:0;font-family:var(--pixel);font-size:10px;color:var(--ink-2)}
+
+/* ---- status bar ---- */
+.status{grid-column:1/-1;display:flex;gap:18px;align-items:center;padding:4px 10px;background:var(--panel);border-top:2px solid var(--panel-2);font-family:var(--mono);font-size:11.5px;color:var(--panel-ink);white-space:nowrap;overflow:hidden}
+.status .spacer{flex:1}
+.status a{color:var(--panel-ink)}
+
+@media (max-width:760px){
+  .app{grid-template-columns:1fr;grid-template-rows:auto 1fr auto auto}
+  .side{border-left:0;border-top:2px solid var(--panel-3);max-height:42vh}
+  #nav{display:none}
+  .titlebar .sub,.titlebar .kbd-only{display:none}
+  .card{max-height:60%}
+}
+@media (prefers-reduced-motion:reduce){.hint{transition:none}}
+</style>
+
+<div class="app">
+  <header class="titlebar">
+    <h1>Sim<span>León</span></h1>
+    <span class="sub">León, Guanajuato · pixel art isométrico · 77 cuadros · 58.7 km²</span>
+    <span class="spacer"></span>
+    <button class="tb" id="btnLabels" aria-pressed="false" title="Mostrar todas las etiquetas">Etiquetas</button>
+    <button class="tb" id="btnReport" aria-pressed="false" title="Marcar un error del dibujo para corregirlo">Reportar <kbd>R</kbd></button>
+    <button class="tb kbd-only" id="btnGrid" aria-pressed="false" title="Mostrar cuadrículas de render">Cuadrícula <kbd>Q</kbd></button>
+    <a class="tb story-link" href="story.html">Cómo se hizo →</a>
+  </header>
+
+  <main id="map">
+    <div id="osd" role="application" aria-label="Mapa isométrico de León"></div>
+    <svg class="compass" viewBox="0 0 64 64" aria-label="Brújula">
+      <circle cx="32" cy="32" r="29" fill="rgba(15,20,32,.75)" stroke="#8d99ad" stroke-width="2"/>
+      <g id="needle" transform="rotate(30 32 32)">
+        <polygon points="32,6 38,32 32,28 26,32" fill="#c8553d"/>
+        <polygon points="32,58 38,32 32,36 26,32" fill="#dbe2ec"/>
+        <text x="32" y="17" text-anchor="middle" font-family="'Press Start 2P',monospace" font-size="7" fill="#fff">N</text>
+      </g>
+    </svg>
+    <div class="rep-layer" id="repLayer"><div class="rep-rect" id="repRect" hidden></div></div>
+    <form class="rep-form" id="repForm">
+      <h4>Reportar error</h4>
+      <div class="meta" id="repMeta"></div>
+      <select id="repType"><option value="invented_landmark">Edificio o templo inventado</option><option value="wrong_architecture">Edificio real mal dibujado</option><option value="wrong_size">Tamaño o altura equivocada</option><option value="wrong_ground">Parque o pasto donde no hay</option><option value="missing_structure">Falta algo que sí existe</option><option value="other">Otro</option></select>
+      <textarea id="repNote" placeholder="¿Qué hay realmente ahí? (opcional)"></textarea>
+      <div class="row"><button type="button" class="tb" id="repCancel">Cancelar</button><button type="submit" class="tb" id="repSend">Enviar</button></div>
+    </form>
+    <div class="toast" id="toast"></div>
+    <div class="zoombtns"><button class="tb" id="zin" aria-label="Acercar">+</button><button class="tb" id="zout" aria-label="Alejar">−</button><button class="tb" id="zhome" aria-label="Vista completa" style="font-size:9px">⌂</button></div>
+    <div class="scalebar" id="scalebar"><i style="width:80px"></i>100 m</div>
+    <div class="hint" id="hint">Arrastra para moverte · rueda para acercar · haz clic en un pin</div>
+  </main>
+
+  <aside class="side">
+    <div class="sec">
+      <h2>Buscar</h2>
+      <div class="search"><input id="q" type="search" placeholder="Catedral, Arco, Estadio…  ( / )" autocomplete="off" aria-label="Buscar lugares"></div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="sec" id="navsec"><h2>Mapa</h2><div id="nav"></div></div>
+    <div class="card" id="card"></div>
+    <div class="list" id="list" role="listbox" aria-label="Lugares"></div>
+  </aside>
+
+  <footer class="status">
+    <span id="coords">21.12000, -101.67000</span>
+    <span id="zoomlbl">zoom 1.0×</span>
+    <span>77 cuadros · 58.7 km² · 2.93 px/m</span>
+    <span class="spacer"></span>
+    <span>Imágenes 3D © Google · Pixel art: Nano Banana Pro · <a href="story.html">cómo se hizo</a></span>
+  </footer>
+</div>
+
+<script src="vendor/openseadragon.min.js"></script>
+<script>
+const POIS=[{"id": "catedral", "name": "Catedral Basílica de Nuestra Madre Santísima de la Luz", "cat": "religioso", "lat": 21.12389, "lon": -101.68208, "desc": "La catedral de León. Su construcción arrancó a mediados del siglo XVIII y tardó más de un siglo en terminarse; el estilo es barroco con torres neoclásicas. Es el punto de referencia del Centro Histórico y el edificio que más se reconoce desde el aire por su cúpula y sus dos torres.", "google_rating": 4.8, "x": 8715, "y": 7336, "nx": 0.38685, "ny": 0.51171}, {"id": "arco", "name": "Arco Triunfal de la Calzada de los Héroes", "cat": "monumento", "lat": 21.11891, "lon": -101.67206, "desc": "El símbolo de León. Se levantó a finales del siglo XIX y el león de bronce que lo corona llegó en la década de 1940. Remata la Calzada de los Héroes, el paseo que conecta el Centro con la zona del estadio y el Forum.", "google_rating": 4.8, "x": 10546, "y": 9211, "nx": 0.46811, "ny": 0.64252}, {"id": "expiatorio", "name": "Templo Expiatorio del Sagrado Corazón de Jesús", "cat": "religioso", "lat": 21.12032, "lon": -101.67474, "desc": "Templo neogótico iniciado en 1921 y construido durante casi un siglo, en buena parte con donativos de los leoneses. Bajo el templo hay catacumbas visitables. Sus agujas son de lo más alto del centro y salen muy bien en pixel art.", "google_rating": 4.8, "x": 10069, "y": 8696, "nx": 0.44694, "ny": 0.60655}, {"id": "doblado", "name": "Teatro Manuel Doblado", "cat": "cultura", "lat": 21.12302, "lon": -101.68011, "desc": "Teatro decimonónico de estilo neoclásico, inaugurado en 1880 y remodelado en los años setenta. Sede histórica de ópera, conciertos y del Festival Internacional de Arte Contemporáneo.", "google_rating": 4.7, "x": 9092, "y": 7685, "nx": 0.40361, "ny": 0.53606}, {"id": "palacio", "name": "Palacio Municipal", "cat": "gobierno", "lat": 21.122, "lon": -101.68321, "desc": "Sede del ayuntamiento, frente a la Plaza Principal. Edificio de cantera con portales; desde aquí se administra la ciudad que en el juego estaríamos construyendo.", "google_rating": 4.2, "x": 8112, "y": 7566, "nx": 0.36008, "ny": 0.52776}, {"id": "fundadores", "name": "Plaza de los Fundadores", "cat": "plaza", "lat": 21.12288, "lon": -101.68313, "desc": "Plaza junto a la Catedral que recuerda la fundación de la Villa de León en 1576. Punto de encuentro y arranque de la zona peatonal.", "google_rating": 4.6, "x": 8275, "y": 7415, "nx": 0.36733, "ny": 0.51725}, {"id": "plaza-principal", "name": "Plaza Principal", "cat": "plaza", "lat": 21.1217, "lon": -101.68234, "desc": "El zócalo de León, rodeado de portales, con su kiosco y las jardineras que en el mapa se ven como manchas verdes perfectamente cuadradas. Aquí empieza la calle Madero.", "google_rating": 4.7, "x": 8292, "y": 7705, "nx": 0.36808, "ny": 0.53745}, {"id": "sagrario", "name": "Parroquia del Sagrario", "cat": "religioso", "lat": 21.12241, "lon": -101.68303, "desc": "Una de las parroquias más antiguas de la ciudad, a un costado de la Plaza Principal, con fachada barroca de cantera rosa.", "google_rating": 4.6, "x": 8226, "y": 7510, "nx": 0.36512, "ny": 0.52383}, {"id": "angeles", "name": "Templo de Nuestra Señora de los Ángeles", "cat": "religioso", "lat": 21.12531, "lon": -101.68301, "desc": "Templo barroco del siglo XVIII con una de las fachadas más elaboradas del centro, unas cuadras al norte de la Catedral.", "google_rating": 4.7, "x": 8700, "y": 6989, "nx": 0.38618, "ny": 0.48754}, {"id": "corazon-maria", "name": "Templo del Inmaculado Corazón de María", "cat": "religioso", "lat": 21.12401, "lon": -101.68329, "desc": "Templo de cantera con dos torres esbeltas, entre la Catedral y el Barrio Arriba.", "google_rating": 4.7, "x": 8416, "y": 7196, "nx": 0.37358, "ny": 0.50196}, {"id": "san-juan", "name": "Templo de San Juan de Dios", "cat": "religioso", "lat": 21.1171, "lon": -101.67934, "desc": "Templo y plaza del barrio de San Juan de Dios, al sur del centro, en el camino hacia el Panteón de San Nicolás.", "google_rating": 4.7, "x": 8337, "y": 8826, "nx": 0.37009, "ny": 0.61567}, {"id": "museo-ciudad", "name": "Museo de la Ciudad", "cat": "cultura", "lat": 21.12297, "lon": -101.67929, "desc": "Casona del centro que resguarda la historia de León: de villa ganadera a capital del calzado. Buena parada para entender qué estamos viendo en el mapa.", "google_rating": 4.6, "x": 9300, "y": 7774, "nx": 0.41282, "ny": 0.54227}, {"id": "mil", "name": "Museo de las Identidades Leonesas (MIL)", "cat": "cultura", "lat": 21.12167, "lon": -101.68463, "desc": "Museo dedicado a lo que hace leonés a un leonés: el calzado, la piel, la Feria, el futbol y las tradiciones de barrio.", "google_rating": 4.5, "x": 7685, "y": 7487, "nx": 0.34112, "ny": 0.52223}, {"id": "casa-cultura", "name": "Casa de la Cultura Diego Rivera", "cat": "cultura", "lat": 21.12326, "lon": -101.683, "desc": "Centro cultural municipal a espaldas de la Catedral, con talleres, exposiciones y un patio central.", "google_rating": 4.5, "x": 8371, "y": 7360, "nx": 0.37158, "ny": 0.51336}, {"id": "arte-sacro", "name": "Museo de Arte Sacro", "cat": "cultura", "lat": 21.12475, "lon": -101.68183, "desc": "Colección de arte religioso virreinal en el conjunto de la Catedral.", "google_rating": 4.6, "x": 8920, "y": 7205, "nx": 0.39594, "ny": 0.50261}, {"id": "comonfort", "name": "Mercado Comonfort", "cat": "mercado", "lat": 21.12118, "lon": -101.68573, "desc": "Mercado tradicional al poniente del centro; junto con el Aldama, el lugar de las guacamayas, la cecina y las nieves.", "google_rating": 4.2, "x": 7316, "y": 7468, "nx": 0.32476, "ny": 0.5209}, {"id": "aldama", "name": "Mercado Aldama", "cat": "mercado", "lat": 21.12237, "lon": -101.68621, "desc": "Mercado popular del centro, famoso por la comida típica leonesa. Desde el aire es una de las naves grandes con techo claro.", "google_rating": 4.3, "x": 7382, "y": 7206, "nx": 0.3277, "ny": 0.50268}, {"id": "coecillo", "name": "Barrio del Coecillo", "cat": "barrio", "lat": 21.12509, "lon": -101.66841, "desc": "Uno de los barrios fundacionales de León, de origen indígena, al oriente del centro. Su templo de San Francisco de Asís es el corazón del barrio.", "google_rating": 4.7, "x": 12506, "y": 8455, "nx": 0.55512, "ny": 0.58975}, {"id": "calzada", "name": "Calzada de los Héroes", "cat": "paseo", "lat": 21.11754, "lon": -101.66524, "desc": "Paseo arbolado que va del Arco hacia el oriente, bordeado de fuentes y monumentos. En el mapa es la franja verde recta que corta la trama en diagonal.", "google_rating": 4.7, "x": 12118, "y": 10124, "nx": 0.53793, "ny": 0.70618}, {"id": "plaza-piel", "name": "Plaza Piel (Zona Piel)", "cat": "comercio", "lat": 21.11883, "lon": -101.66301, "desc": "Corazón de la Zona Piel, el distrito de zapaterías y marroquinerías junto a la Central de Autobuses. León produce buena parte del calzado de México y aquí se vende.", "google_rating": 4.4, "x": 12914, "y": 10109, "nx": 0.57324, "ny": 0.70516}, {"id": "central", "name": "Central de Autobuses", "cat": "transporte", "lat": 21.12096, "lon": -101.66136, "desc": "La terminal de autobuses foráneos de León. Su enorme techo es una de las formas más fáciles de ubicar en la zona oriente del mapa.", "google_rating": 4.3, "x": 13693, "y": 9887, "nx": 0.6078, "ny": 0.68965}, {"id": "estadio", "name": "Estadio León (Nou Camp)", "cat": "deporte", "lat": 21.11555, "lon": -101.6577, "desc": "Casa del Club León desde 1967. El óvalo verde del estadio es el objeto más grande y reconocible del mapa fuera del centro.", "google_rating": 4.7, "x": 13780, "y": 11218, "nx": 0.6117, "ny": 0.78253}, {"id": "forum", "name": "Forum Cultural Guanajuato", "cat": "cultura", "lat": 21.11591, "lon": -101.66052, "desc": "Complejo cultural del estado inaugurado en 2006: explanadas, la Biblioteca Central Estatal, el Museo de Arte e Historia y el Teatro del Bicentenario.", "google_rating": 4.7, "x": 13097, "y": 10878, "nx": 0.58135, "ny": 0.7588}, {"id": "mahg", "name": "Museo de Arte e Historia de Guanajuato", "cat": "cultura", "lat": 21.11664, "lon": -101.65997, "desc": "Museo del Forum Cultural con colecciones de arte e historia del estado y exposiciones internacionales.", "google_rating": 4.7, "x": 13359, "y": 10800, "nx": 0.59302, "ny": 0.75338}, {"id": "bicentenario", "name": "Teatro del Bicentenario Roberto Plasencia Saldaña", "cat": "cultura", "lat": 21.11412, "lon": -101.66053, "desc": "Teatro de gran formato abierto en 2010 dentro del Forum Cultural, sede de ópera, ballet y del Festival Internacional Cervantino en León.", "google_rating": 4.8, "x": 12805, "y": 11200, "nx": 0.56838, "ny": 0.78122}, {"id": "poliforum", "name": "Poliforum León", "cat": "eventos", "lat": 21.11396, "lon": -101.65469, "desc": "Centro de convenciones y exposiciones de la ciudad; aquí se hacen SAPICA y las ferias del calzado y la piel.", "google_rating": 4.5, "x": 14315, "y": 11799, "nx": 0.63544, "ny": 0.82301}, {"id": "feria", "name": "Explanada de la Feria Estatal de León", "cat": "eventos", "lat": 21.11548, "lon": -101.6555, "desc": "Recinto de la Feria Estatal de León, cada enero. Junto al estadio, el Poliforum y el Forum forma el gran polo de eventos de la ciudad.", "google_rating": 4.6, "x": 14348, "y": 11446, "nx": 0.63689, "ny": 0.7984}, {"id": "panteon", "name": "Panteón de San Nicolás", "cat": "monumento", "lat": 21.11266, "lon": -101.67767, "desc": "Cementerio histórico del siglo XIX al sur del centro, con mausoleos de las familias leonesas de la época.", "google_rating": 4.5, "x": 8059, "y": 9789, "nx": 0.35772, "ny": 0.68282}, {"id": "guadalupe", "name": "Santuario de Nuestra Señora de Guadalupe", "cat": "religioso", "lat": 21.12574, "lon": -101.68811, "desc": "Santuario del Barrio Arriba, uno de los barrios más antiguos de la ciudad, al noroeste de la Catedral.", "google_rating": 4.7, "x": 7428, "y": 6414, "nx": 0.3297, "ny": 0.4474}, {"id": "madero", "name": "Calle Madero (zona peatonal)", "cat": "paseo", "lat": 21.12063, "lon": -101.67753, "desc": "Eje peatonal que une la Plaza Principal con el Templo Expiatorio y sigue hasta el Arco. Es el paseo comercial clásico del centro.", "google_rating": 4.7, "x": 9385, "y": 8367, "nx": 0.41658, "ny": 0.58366}, {"id": "chapalita", "name": "Parque Chapalita", "cat": "plaza", "lat": 21.1254, "lon": -101.70032, "desc": "Parque de barrio al poniente del centro, con canchas y arboleda; una de las pocas manchas verdes grandes de esta parte de la ciudad.", "google_rating": 4.4, "x": 4160, "y": 5283, "nx": 0.18466, "ny": 0.36851}, {"id": "lasalle", "name": "Universidad De La Salle Bajío", "cat": "cultura", "lat": 21.10594, "lon": -101.69521, "desc": "Campus universitario al suroeste del centro, con sus canchas y explanadas fáciles de reconocer en el mapa.", "google_rating": 4.6, "x": 2357, "y": 9286, "nx": 0.10461, "ny": 0.64777}, {"id": "mariachi", "name": "Plaza del Mariachi", "cat": "plaza", "lat": 21.13618, "lon": -101.691, "desc": "Plaza tradicional del norte del centro donde se contratan mariachis; punto de referencia de la zona.", "google_rating": 4.3, "x": 8356, "y": 4252, "nx": 0.37091, "ny": 0.29657}, {"id": "san-nicolas", "name": "Templo de San Nicolás de Tolentino", "cat": "religioso", "lat": 21.1329, "lon": -101.68108, "desc": "Templo del barrio de San Nicolás, al norte de la Catedral.", "google_rating": 4.5, "x": 10435, "y": 5811, "nx": 0.46322, "ny": 0.40534}, {"id": "san-miguel", "name": "Barrio de San Miguel", "cat": "barrio", "lat": 21.10688, "lon": -101.68059, "desc": "Barrio tradicional al sur del centro, de los más antiguos de León, con su templo y su jardín.", "google_rating": 4.6, "x": 6355, "y": 10545, "nx": 0.28211, "ny": 0.73554}];
+const META={width:22528,height:14336};
+const GRID={"cols": 11, "rows": 7, "i0": -5, "j0": 4, "grid": 2048, "W": 700, "heading": -30, "pitch": -40, "squares": [{"i": -5, "j": 4, "has": true}, {"i": -4, "j": 4, "has": true}, {"i": -3, "j": 4, "has": true}, {"i": -2, "j": 4, "has": true}, {"i": -1, "j": 4, "has": true}, {"i": 0, "j": 4, "has": true}, {"i": 1, "j": 4, "has": true}, {"i": 2, "j": 4, "has": true}, {"i": 3, "j": 4, "has": true}, {"i": 4, "j": 4, "has": true}, {"i": 5, "j": 4, "has": true}, {"i": -5, "j": 3, "has": true}, {"i": -4, "j": 3, "has": true}, {"i": -3, "j": 3, "has": true}, {"i": -2, "j": 3, "has": true}, {"i": -1, "j": 3, "has": true}, {"i": 0, "j": 3, "has": true}, {"i": 1, "j": 3, "has": true}, {"i": 2, "j": 3, "has": true}, {"i": 3, "j": 3, "has": true}, {"i": 4, "j": 3, "has": true}, {"i": 5, "j": 3, "has": true}, {"i": -5, "j": 2, "has": true}, {"i": -4, "j": 2, "has": true}, {"i": -3, "j": 2, "has": true}, {"i": -2, "j": 2, "has": true}, {"i": -1, "j": 2, "has": true}, {"i": 0, "j": 2, "has": true}, {"i": 1, "j": 2, "has": true}, {"i": 2, "j": 2, "has": true}, {"i": 3, "j": 2, "has": true}, {"i": 4, "j": 2, "has": true}, {"i": 5, "j": 2, "has": true}, {"i": -5, "j": 1, "has": true}, {"i": -4, "j": 1, "has": true}, {"i": -3, "j": 1, "has": true}, {"i": -2, "j": 1, "has": true}, {"i": -1, "j": 1, "has": true}, {"i": 0, "j": 1, "has": true}, {"i": 1, "j": 1, "has": true}, {"i": 2, "j": 1, "has": true}, {"i": 3, "j": 1, "has": true}, {"i": 4, "j": 1, "has": true}, {"i": 5, "j": 1, "has": true}, {"i": -5, "j": 0, "has": true}, {"i": -4, "j": 0, "has": true}, {"i": -3, "j": 0, "has": true}, {"i": -2, "j": 0, "has": true}, {"i": -1, "j": 0, "has": true}, {"i": 0, "j": 0, "has": true}, {"i": 1, "j": 0, "has": true}, {"i": 2, "j": 0, "has": true}, {"i": 3, "j": 0, "has": true}, {"i": 4, "j": 0, "has": true}, {"i": 5, "j": 0, "has": true}, {"i": -5, "j": -1, "has": true}, {"i": -4, "j": -1, "has": true}, {"i": -3, "j": -1, "has": true}, {"i": -2, "j": -1, "has": true}, {"i": -1, "j": -1, "has": true}, {"i": 0, "j": -1, "has": true}, {"i": 1, "j": -1, "has": true}, {"i": 2, "j": -1, "has": true}, {"i": 3, "j": -1, "has": true}, {"i": 4, "j": -1, "has": true}, {"i": 5, "j": -1, "has": true}, {"i": -5, "j": -2, "has": true}, {"i": -4, "j": -2, "has": true}, {"i": -3, "j": -2, "has": true}, {"i": -2, "j": -2, "has": true}, {"i": -1, "j": -2, "has": true}, {"i": 0, "j": -2, "has": true}, {"i": 1, "j": -2, "has": true}, {"i": 2, "j": -2, "has": true}, {"i": 3, "j": -2, "has": true}, {"i": 4, "j": -2, "has": true}, {"i": 5, "j": -2, "has": true}]};
+const GEO={"scale": 1.0, "W": 700, "PX": 2048, "left": -3850.0, "top": 3150.0, "dx": 0, "dy": 0, "sinp": 0.6427876096865393, "H": -0.5235987755982988, "lon0": -101.67, "lat0": 21.12, "mlon": 103842.39241002683, "mlat": 110574.0};
+const TILE_SOURCE='tiles.dzi';
+const CATS = {
+  religioso:{c:'#d9a441',l:'Templos'}, monumento:{c:'#c8553d',l:'Monumentos'}, cultura:{c:'#8b5cf6',l:'Cultura'},
+  plaza:{c:'#4e9a3d',l:'Plazas y paseos'}, paseo:{c:'#4e9a3d',l:'Plazas y paseos'}, comercio:{c:'#e07a2f',l:'Comercio'},
+  mercado:{c:'#e07a2f',l:'Comercio'}, deporte:{c:'#3d6fb4',l:'Deporte y eventos'}, eventos:{c:'#3d6fb4',l:'Deporte y eventos'},
+  transporte:{c:'#6d6f73',l:'Transporte'}, gobierno:{c:'#6d6f73',l:'Gobierno'}, barrio:{c:'#b0668a',l:'Barrios'}
+};
+const W = META.width, H = META.height, AR = H / W;
+
+const viewer = OpenSeadragon({
+  id:'osd', prefixUrl:'', showNavigationControl:false, showNavigator:true, navigatorId:'nav', navigatorAutoFade:false,
+  tileSources: TILE_SOURCE, drawer:'canvas', imageSmoothingEnabled:false,
+  minZoomImageRatio:0.6, maxZoomPixelRatio:6, visibilityRatio:0.75, constrainDuringPan:true,
+  animationTime:0.6, springStiffness:8, gestureSettingsMouse:{clickToZoom:false,dblClickToZoom:true}, gestureSettingsTouch:{clickToZoom:false},
+  zoomPerScroll:1.3, defaultZoomLevel:0, homeFillsViewer:false, crossOriginPolicy:false
+});
+document.getElementById('zin').onclick=()=>viewer.viewport.zoomBy(1.5);
+document.getElementById('zout').onclick=()=>viewer.viewport.zoomBy(1/1.5);
+document.getElementById('zhome').onclick=()=>viewer.viewport.goHome();
+
+// ---- markers
+const list = document.getElementById('list'), card = document.getElementById('card');
+let activeId = null, filterCat = null, query = '';
+const markers = {};
+function vp(p){ return new OpenSeadragon.Point(p.nx, p.ny * AR); }
+POIS.forEach(p=>{
+  const el = document.createElement('div'); el.className='mk'; el.style.setProperty('--c', (CATS[p.cat]||{}).c||'#c8553d');
+  el.innerHTML = `<span class="lbl">${p.name}</span><span class="pin"></span><span class="stem"></span>`;
+  el.title = p.name; el.setAttribute('role','button'); el.tabIndex=0;
+  new OpenSeadragon.MouseTracker({element:el, clickHandler:()=>select(p.id, true)}).setTracking(true);
+  el.addEventListener('keydown',e=>{ if(e.key==='Enter') select(p.id,true); });
+  viewer.addOverlay({element:el, location:vp(p), placement:OpenSeadragon.Placement.BOTTOM, checkResize:false});
+  markers[p.id]=el;
+});
+function select(id, fly){
+  activeId = id;
+  Object.entries(markers).forEach(([k,el])=>el.classList.toggle('active', k===id));
+  const p = POIS.find(x=>x.id===id); if(!p) return;
+  const cat = CATS[p.cat]||{c:'#c8553d',l:p.cat};
+  card.style.setProperty('--c', cat.c);
+  card.innerHTML = `<button class="close" aria-label="Cerrar">✕</button><div class="cat">${cat.l}</div><h3>${p.name}</h3><p>${p.desc}</p>
+    <div class="meta"><span>${p.lat.toFixed(5)}, ${p.lon.toFixed(5)}</span>${p.google_rating?`<span>★ ${p.google_rating} en Google</span>`:''}<a href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank" rel="noopener">Google Maps ↗</a></div>`;
+  card.classList.add('on'); card.querySelector('.close').onclick=()=>{card.classList.remove('on');activeId=null;Object.values(markers).forEach(el=>el.classList.remove('active'));};
+  if(fly){ viewer.viewport.panTo(vp(p)); if(viewer.viewport.getZoom()<4) viewer.viewport.zoomTo(4); }
+  [...list.querySelectorAll('button')].forEach(b=>b.setAttribute('aria-selected', b.dataset.id===id));
+}
+function renderList(){
+  const q = query.trim().toLowerCase();
+  const items = POIS.filter(p=>(!filterCat||(CATS[p.cat]||{}).l===filterCat) && (!q||p.name.toLowerCase().includes(q)||p.desc.toLowerCase().includes(q)))
+                    .sort((a,b)=>a.name.localeCompare(b.name,'es'));
+  list.innerHTML = items.length ? items.map(p=>`<button data-id="${p.id}" role="option" style="--c:${(CATS[p.cat]||{}).c}"><b></b><span>${p.name}</span><small>${(CATS[p.cat]||{l:p.cat}).l}</small></button>`).join('') : '<div class="empty">Nada por aquí todavía. El mapa piloto cubre Centro, Zona Piel y el Estadio.</div>';
+  list.querySelectorAll('button').forEach(b=>b.onclick=()=>select(b.dataset.id,true));
+  Object.entries(markers).forEach(([id,el])=>{ el.style.display = items.some(p=>p.id===id)?'':'none'; });
+}
+const chips = document.getElementById('chips'); const catLabels=[...new Set(Object.values(CATS).map(c=>c.l))];
+chips.innerHTML = catLabels.map(l=>`<button class="chip" aria-pressed="false" style="--c:${Object.values(CATS).find(c=>c.l===l).c}"><b style="background:var(--c)"></b>${l}</button>`).join('');
+chips.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{ const l=ch.textContent.trim(); filterCat = filterCat===l?null:l; chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', c.textContent.trim()===filterCat)); renderList(); });
+const q = document.getElementById('q'); q.oninput=()=>{query=q.value;renderList();};
+q.addEventListener('keydown',e=>{ if(e.key==='Enter'){ const b=list.querySelector('button'); if(b) select(b.dataset.id,true);} if(e.key==='Escape'){q.value='';query='';renderList();q.blur();} });
+renderList();
+
+// ---- labels / grid toggles
+const btnLabels=document.getElementById('btnLabels'), btnGrid=document.getElementById('btnGrid');
+btnLabels.onclick=()=>{ const on=btnLabels.getAttribute('aria-pressed')!=='true'; btnLabels.setAttribute('aria-pressed',on); document.getElementById('osd').classList.toggle('labels-on',on); };
+let gridEls=[];
+btnGrid.onclick=()=>{ const on=btnGrid.getAttribute('aria-pressed')!=='true'; btnGrid.setAttribute('aria-pressed',on);
+  if(on&&!gridEls.length){ GRID.squares.forEach(s=>{ const cx=(s.i-GRID.i0+0.5)/GRID.cols, cy=(GRID.j0-s.j+0.5)/GRID.rows*AR; const box=document.createElement('div'); box.className='sq-box'; viewer.addOverlay({element:box,location:new OpenSeadragon.Rect((s.i-GRID.i0)/GRID.cols,(GRID.j0-s.j)/GRID.rows*AR,1/GRID.cols,AR/GRID.rows)}); const id=document.createElement('div'); id.className='sq-id'; id.textContent=`${s.i},${s.j}${s.has?'':' (pendiente)'}`; viewer.addOverlay({element:id,location:new OpenSeadragon.Point(cx,cy),checkResize:false}); gridEls.push(box,id); }); }
+  gridEls.forEach(el=>el.style.display=on?'':'none'); };
+document.addEventListener('keydown',e=>{ if(e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA'||e.target.tagName==='SELECT') return; if(e.key==='/'){e.preventDefault();q.focus();} if(e.key.toLowerCase()==='q') btnGrid.click(); if(e.key.toLowerCase()==='k') btnLabels.click(); if(e.key.toLowerCase()==='r') btnReport.click(); if(e.key==='Escape'&&reporting){ setReporting(false); return; } if(e.key==='Escape'&&card.classList.contains('on')) card.querySelector('.close').click(); });
+
+// ---- report mode (drag a box → job for gen/refine.py)
+const mapEl=document.getElementById('map'), btnReport=document.getElementById('btnReport'), repLayer=document.getElementById('repLayer'), repRect=document.getElementById('repRect'), repForm=document.getElementById('repForm'), toast=document.getElementById('toast');
+let reporting=false, dragStart=null, pendingBox=null;
+function showToast(t,ms=3500){ toast.textContent=t; toast.classList.add('on'); clearTimeout(toast._t); toast._t=setTimeout(()=>toast.classList.remove('on'),ms); }
+function setReporting(on){ reporting=on; btnReport.setAttribute('aria-pressed',on); mapEl.classList.toggle('reporting',on); viewer.setMouseNavEnabled(!on); if(on) showToast('Dibuja un rectángulo sobre el error. Esc para salir.',5000); else { repForm.classList.remove('on'); repRect.hidden=true; } }
+btnReport.onclick=()=>setReporting(!reporting);
+function imgToSquare(ix,iy){ const g=META.width/GRID.cols; const c=Math.floor(ix/g), r=Math.floor(iy/g); const i=GRID.i0+c, j=GRID.j0-r; return {i,j,x:Math.round((ix-c*g)/g*2048),y:Math.round((iy-r*g)/g*2048)}; }
+function layerPt(e){ const b=repLayer.getBoundingClientRect(); return {x:e.clientX-b.left,y:e.clientY-b.top}; }
+repLayer.addEventListener('pointerdown',e=>{ if(!reporting) return; dragStart=layerPt(e); repRect.hidden=false; Object.assign(repRect.style,{left:dragStart.x+'px',top:dragStart.y+'px',width:'0px',height:'0px'}); repLayer.setPointerCapture(e.pointerId); });
+repLayer.addEventListener('pointermove',e=>{ if(!dragStart) return; const p=layerPt(e); Object.assign(repRect.style,{left:Math.min(p.x,dragStart.x)+'px',top:Math.min(p.y,dragStart.y)+'px',width:Math.abs(p.x-dragStart.x)+'px',height:Math.abs(p.y-dragStart.y)+'px'}); });
+repLayer.addEventListener('pointerup',e=>{ if(!dragStart) return; const p=layerPt(e); const a=dragStart; dragStart=null; if(Math.abs(p.x-a.x)<8||Math.abs(p.y-a.y)<8){ repRect.hidden=true; return; }
+  const P1=viewer.viewport.viewerElementToImageCoordinates(new OpenSeadragon.Point(Math.min(a.x,p.x),Math.min(a.y,p.y))), P2=viewer.viewport.viewerElementToImageCoordinates(new OpenSeadragon.Point(Math.max(a.x,p.x),Math.max(a.y,p.y)));
+  const s1=imgToSquare(P1.x,P1.y), s2=imgToSquare(P2.x,P2.y);
+  if(s1.i!==s2.i||s1.j!==s2.j){ showToast('El rectángulo cruza dos cuadros; márcalo dentro de uno solo (tecla Q muestra los límites).'); repRect.hidden=true; return; }
+  const [lon,lat]=pixelToLonLat((P1.x+P2.x)/2,(P1.y+P2.y)/2);
+  pendingBox={sq:[s1.i,s1.j],box:[Math.max(0,s1.x),Math.max(0,s1.y),Math.min(2048,s2.x),Math.min(2048,s2.y)],lat:+lat.toFixed(5),lon:+lon.toFixed(5),img:[Math.round(P1.x),Math.round(P1.y),Math.round(P2.x),Math.round(P2.y)]};
+  document.getElementById('repMeta').textContent=`cuadro ${s1.i},${s1.j} · caja ${pendingBox.box.join(',')} · ${lat.toFixed(4)}, ${lon.toFixed(4)}`;
+  const fx=Math.min(mapEl.clientWidth-290,Math.max(a.x,p.x)+8), fy=Math.min(mapEl.clientHeight-230,Math.min(a.y,p.y)); Object.assign(repForm.style,{left:fx+'px',top:fy+'px'}); repForm.classList.add('on'); document.getElementById('repNote').focus(); });
+document.getElementById('repCancel').onclick=()=>{ repForm.classList.remove('on'); repRect.hidden=true; pendingBox=null; };
+repForm.onsubmit=async e=>{ e.preventDefault(); if(!pendingBox) return; const rep={...pendingBox,type:document.getElementById('repType').value,note:document.getElementById('repNote').value.trim(),ts:Date.now(),status:'pending',source:'map'}; repForm.classList.remove('on'); repRect.hidden=true; pendingBox=null; document.getElementById('repNote').value='';
+  fallbackReport(rep); };
+const repPins={};
+function drawReport(id,rep){ let el=repPins[id]; if(!el){ el=document.createElement('div'); el.className='rep-pin'; el.innerHTML='<span></span>'; repPins[id]=el; const g=META.width/GRID.cols; const c=rep.sq[0]-GRID.i0, r=GRID.j0-rep.sq[1]; const x=(c+rep.box[0]/2048)*g/META.width, y=(r+rep.box[1]/2048)*g/META.width, w=(rep.box[2]-rep.box[0])/2048*g/META.width, h=(rep.box[3]-rep.box[1])/2048*g/META.width; viewer.addOverlay({element:el,location:new OpenSeadragon.Rect(x,y,w,h)}); }
+  el.classList.toggle('done',rep.status==='done'); el.querySelector('span').textContent=(rep.status==='done'?'corregido':'reportado')+(rep.note?': '+rep.note.slice(0,40):''); }
+function fallbackReport(rep){ const txt=JSON.stringify(rep); (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>showToast('Reporte copiado al portapapeles: pégalo en build/reports.json o en el chat.',6000),()=>showToast('Reporte: '+txt,9000)); drawReport('local'+rep.ts, rep); }
+
+// ---- status: coords, zoom, scale bar
+const M_PER_PX = 0.34180; // metres per mosaic pixel (screen x)
+const coords=document.getElementById('coords'), zoomlbl=document.getElementById('zoomlbl'), scalebar=document.getElementById('scalebar');
+function pixelToLonLat(px,py){ const g=GEO; const X=px/g.scale*g.W/g.PX + g.left - g.dx; const Y=g.top - py/g.scale*g.W/g.PX - g.dy; const u=X, v=Y/g.sinp; const e=u*Math.cos(g.H)+v*Math.sin(g.H), n=-u*Math.sin(g.H)+v*Math.cos(g.H); return [g.lon0+e/g.mlon, g.lat0+n/g.mlat]; }
+new OpenSeadragon.MouseTracker({element:viewer.container, moveHandler:e=>{ const ip=viewer.viewport.viewerElementToImageCoordinates(e.position); const [lon,lat]=pixelToLonLat(ip.x,ip.y); coords.textContent=`${lat.toFixed(5)}, ${lon.toFixed(5)}`; }}).setTracking(true);
+function updateScale(){ const z=viewer.viewport.getZoom(true); const imgPxPerScreenPx = W/ (viewer.viewport.getContainerSize().x*z); const mPerScreenPx = imgPxPerScreenPx*M_PER_PX; let target=100; const cands=[10,20,50,100,200,500,1000]; for(const c of cands){ if(c/mPerScreenPx<=160) target=c; } const wpx=target/mPerScreenPx; scalebar.innerHTML=`<i style="width:${wpx.toFixed(0)}px"></i>${target>=1000?(target/1000)+' km':target+' m'}`; zoomlbl.textContent=`zoom ${(1/imgPxPerScreenPx).toFixed(1)}×`; }
+viewer.addHandler('animation', updateScale); viewer.addHandler('open', ()=>{ updateScale(); setTimeout(()=>document.getElementById('hint').classList.add('gone'), 6000);  });
+viewer.addHandler('canvas-click', e=>{ if(!e.quick) return; });
+</script>
+
+</body></html>

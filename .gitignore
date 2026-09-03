@@ -1,0 +1,8 @@
+.env
+node_modules/
+renders/
+pixels_pro/
+refine_work/
+site/mosaic.png
+site/embedded_tiles.json
+__pycache__/

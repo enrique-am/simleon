@@ -1,0 +1,14 @@
+Turn this aerial photo into a screenshot from a 1990s isometric city-building video game (SimCity 2000, RollerCoaster Tycoon, Transport Tycoon). The result must look like hand-placed PIXEL ART sprites, NOT a photograph and NOT a painting.
+
+STYLE (most important):
+- Big, clearly visible pixels: draw as if the image were 512x512 pixels and then enlarged with hard edges. Absolutely no photographic texture, no blur, no noise, no gradients, no anti-aliasing.
+- Retro 16-bit palette of about 48 flat colours. Every surface is a flat colour fill with 2-3 tone cel shading. Light from the top-left, hard one-tone shadows to the bottom-right.
+- Every building is a simple game sprite: flat rooftop (terracotta red, warm beige, off-white, grey concrete or pale blue-grey corrugated sheet), facades with a row of tiny dark pixel windows.
+- Landmarks that really are in the photo (a church, a stadium, a tall tower) get extra care — e.g. a church keeps its exact domes and towers in ochre stone. But NEVER add a church, dome, tower or landmark that is not in the photo; most squares have none.
+- Streets: flat mid-grey asphalt with a 1-pixel lighter centre line and tiny 3-pixel cars in bright colours. Sidewalks pale grey. Plazas: pale flagstone grid. Trees: round dark-green blobs with a lighter green top. Grass: flat saturated green — but ONLY where the photo shows grass; this is a semi-arid city, so bare dirt lots, dry riverbeds and gravel stay tan/brown, never green.
+- Warm, sunny, saturated, cheerful colours like the original games.
+
+LAYOUT (must be preserved exactly):
+- This is a low-rise historic Mexican city centre: most buildings are 1-3 storeys. NEVER invent apartment towers, office blocks, parks, parking lots or plazas that are not in the photo. If a block in the photo is a jumble of small flat roofs, draw a jumble of small flat roofs. Building heights must match the photo exactly.
+- Same camera angle and same scale as the photo. Every street, block, plaza, building footprint, building height and landmark stays exactly where it is in the photo. Do not add, remove, move, or enlarge anything.
+- The image fills the whole frame edge to edge: no border, no margin, no vignette, no text, no labels, no UI, no sky, no horizon.

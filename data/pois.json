@@ -1,0 +1,317 @@
+[
+ {
+  "id": "catedral",
+  "name": "Catedral Basílica de Nuestra Madre Santísima de la Luz",
+  "cat": "religioso",
+  "lat": 21.12389,
+  "lon": -101.68208,
+  "desc": "La catedral de León. Su construcción arrancó a mediados del siglo XVIII y tardó más de un siglo en terminarse; el estilo es barroco con torres neoclásicas. Es el punto de referencia del Centro Histórico y el edificio que más se reconoce desde el aire por su cúpula y sus dos torres.",
+  "google_rating": 4.8
+ },
+ {
+  "id": "arco",
+  "name": "Arco Triunfal de la Calzada de los Héroes",
+  "cat": "monumento",
+  "lat": 21.11891,
+  "lon": -101.67206,
+  "desc": "El símbolo de León. Se levantó a finales del siglo XIX y el león de bronce que lo corona llegó en la década de 1940. Remata la Calzada de los Héroes, el paseo que conecta el Centro con la zona del estadio y el Forum.",
+  "google_rating": 4.8
+ },
+ {
+  "id": "expiatorio",
+  "name": "Templo Expiatorio del Sagrado Corazón de Jesús",
+  "cat": "religioso",
+  "lat": 21.12032,
+  "lon": -101.67474,
+  "desc": "Templo neogótico iniciado en 1921 y construido durante casi un siglo, en buena parte con donativos de los leoneses. Bajo el templo hay catacumbas visitables. Sus agujas son de lo más alto del centro y salen muy bien en pixel art.",
+  "google_rating": 4.8
+ },
+ {
+  "id": "doblado",
+  "name": "Teatro Manuel Doblado",
+  "cat": "cultura",
+  "lat": 21.12302,
+  "lon": -101.68011,
+  "desc": "Teatro decimonónico de estilo neoclásico, inaugurado en 1880 y remodelado en los años setenta. Sede histórica de ópera, conciertos y del Festival Internacional de Arte Contemporáneo.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "palacio",
+  "name": "Palacio Municipal",
+  "cat": "gobierno",
+  "lat": 21.122,
+  "lon": -101.68321,
+  "desc": "Sede del ayuntamiento, frente a la Plaza Principal. Edificio de cantera con portales; desde aquí se administra la ciudad que en el juego estaríamos construyendo.",
+  "google_rating": 4.2
+ },
+ {
+  "id": "fundadores",
+  "name": "Plaza de los Fundadores",
+  "cat": "plaza",
+  "lat": 21.12288,
+  "lon": -101.68313,
+  "desc": "Plaza junto a la Catedral que recuerda la fundación de la Villa de León en 1576. Punto de encuentro y arranque de la zona peatonal.",
+  "google_rating": 4.6
+ },
+ {
+  "id": "plaza-principal",
+  "name": "Plaza Principal",
+  "cat": "plaza",
+  "lat": 21.1217,
+  "lon": -101.68234,
+  "desc": "El zócalo de León, rodeado de portales, con su kiosco y las jardineras que en el mapa se ven como manchas verdes perfectamente cuadradas. Aquí empieza la calle Madero.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "sagrario",
+  "name": "Parroquia del Sagrario",
+  "cat": "religioso",
+  "lat": 21.12241,
+  "lon": -101.68303,
+  "desc": "Una de las parroquias más antiguas de la ciudad, a un costado de la Plaza Principal, con fachada barroca de cantera rosa.",
+  "google_rating": 4.6
+ },
+ {
+  "id": "angeles",
+  "name": "Templo de Nuestra Señora de los Ángeles",
+  "cat": "religioso",
+  "lat": 21.12531,
+  "lon": -101.68301,
+  "desc": "Templo barroco del siglo XVIII con una de las fachadas más elaboradas del centro, unas cuadras al norte de la Catedral.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "corazon-maria",
+  "name": "Templo del Inmaculado Corazón de María",
+  "cat": "religioso",
+  "lat": 21.12401,
+  "lon": -101.68329,
+  "desc": "Templo de cantera con dos torres esbeltas, entre la Catedral y el Barrio Arriba.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "san-juan",
+  "name": "Templo de San Juan de Dios",
+  "cat": "religioso",
+  "lat": 21.1171,
+  "lon": -101.67934,
+  "desc": "Templo y plaza del barrio de San Juan de Dios, al sur del centro, en el camino hacia el Panteón de San Nicolás.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "museo-ciudad",
+  "name": "Museo de la Ciudad",
+  "cat": "cultura",
+  "lat": 21.12297,
+  "lon": -101.67929,
+  "desc": "Casona del centro que resguarda la historia de León: de villa ganadera a capital del calzado. Buena parada para entender qué estamos viendo en el mapa.",
+  "google_rating": 4.6
+ },
+ {
+  "id": "mil",
+  "name": "Museo de las Identidades Leonesas (MIL)",
+  "cat": "cultura",
+  "lat": 21.12167,
+  "lon": -101.68463,
+  "desc": "Museo dedicado a lo que hace leonés a un leonés: el calzado, la piel, la Feria, el futbol y las tradiciones de barrio.",
+  "google_rating": 4.5
+ },
+ {
+  "id": "casa-cultura",
+  "name": "Casa de la Cultura Diego Rivera",
+  "cat": "cultura",
+  "lat": 21.12326,
+  "lon": -101.683,
+  "desc": "Centro cultural municipal a espaldas de la Catedral, con talleres, exposiciones y un patio central.",
+  "google_rating": 4.5
+ },
+ {
+  "id": "arte-sacro",
+  "name": "Museo de Arte Sacro",
+  "cat": "cultura",
+  "lat": 21.12475,
+  "lon": -101.68183,
+  "desc": "Colección de arte religioso virreinal en el conjunto de la Catedral.",
+  "google_rating": 4.6
+ },
+ {
+  "id": "comonfort",
+  "name": "Mercado Comonfort",
+  "cat": "mercado",
+  "lat": 21.12118,
+  "lon": -101.68573,
+  "desc": "Mercado tradicional al poniente del centro; junto con el Aldama, el lugar de las guacamayas, la cecina y las nieves.",
+  "google_rating": 4.2
+ },
+ {
+  "id": "aldama",
+  "name": "Mercado Aldama",
+  "cat": "mercado",
+  "lat": 21.12237,
+  "lon": -101.68621,
+  "desc": "Mercado popular del centro, famoso por la comida típica leonesa. Desde el aire es una de las naves grandes con techo claro.",
+  "google_rating": 4.3
+ },
+ {
+  "id": "coecillo",
+  "name": "Barrio del Coecillo",
+  "cat": "barrio",
+  "lat": 21.12509,
+  "lon": -101.66841,
+  "desc": "Uno de los barrios fundacionales de León, de origen indígena, al oriente del centro. Su templo de San Francisco de Asís es el corazón del barrio.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "calzada",
+  "name": "Calzada de los Héroes",
+  "cat": "paseo",
+  "lat": 21.11754,
+  "lon": -101.66524,
+  "desc": "Paseo arbolado que va del Arco hacia el oriente, bordeado de fuentes y monumentos. En el mapa es la franja verde recta que corta la trama en diagonal.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "plaza-piel",
+  "name": "Plaza Piel (Zona Piel)",
+  "cat": "comercio",
+  "lat": 21.11883,
+  "lon": -101.66301,
+  "desc": "Corazón de la Zona Piel, el distrito de zapaterías y marroquinerías junto a la Central de Autobuses. León produce buena parte del calzado de México y aquí se vende.",
+  "google_rating": 4.4
+ },
+ {
+  "id": "central",
+  "name": "Central de Autobuses",
+  "cat": "transporte",
+  "lat": 21.12096,
+  "lon": -101.66136,
+  "desc": "La terminal de autobuses foráneos de León. Su enorme techo es una de las formas más fáciles de ubicar en la zona oriente del mapa.",
+  "google_rating": 4.3
+ },
+ {
+  "id": "estadio",
+  "name": "Estadio León (Nou Camp)",
+  "cat": "deporte",
+  "lat": 21.11555,
+  "lon": -101.6577,
+  "desc": "Casa del Club León desde 1967. El óvalo verde del estadio es el objeto más grande y reconocible del mapa fuera del centro.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "forum",
+  "name": "Forum Cultural Guanajuato",
+  "cat": "cultura",
+  "lat": 21.11591,
+  "lon": -101.66052,
+  "desc": "Complejo cultural del estado inaugurado en 2006: explanadas, la Biblioteca Central Estatal, el Museo de Arte e Historia y el Teatro del Bicentenario.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "mahg",
+  "name": "Museo de Arte e Historia de Guanajuato",
+  "cat": "cultura",
+  "lat": 21.11664,
+  "lon": -101.65997,
+  "desc": "Museo del Forum Cultural con colecciones de arte e historia del estado y exposiciones internacionales.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "bicentenario",
+  "name": "Teatro del Bicentenario Roberto Plasencia Saldaña",
+  "cat": "cultura",
+  "lat": 21.11412,
+  "lon": -101.66053,
+  "desc": "Teatro de gran formato abierto en 2010 dentro del Forum Cultural, sede de ópera, ballet y del Festival Internacional Cervantino en León.",
+  "google_rating": 4.8
+ },
+ {
+  "id": "poliforum",
+  "name": "Poliforum León",
+  "cat": "eventos",
+  "lat": 21.11396,
+  "lon": -101.65469,
+  "desc": "Centro de convenciones y exposiciones de la ciudad; aquí se hacen SAPICA y las ferias del calzado y la piel.",
+  "google_rating": 4.5
+ },
+ {
+  "id": "feria",
+  "name": "Explanada de la Feria Estatal de León",
+  "cat": "eventos",
+  "lat": 21.11548,
+  "lon": -101.6555,
+  "desc": "Recinto de la Feria Estatal de León, cada enero. Junto al estadio, el Poliforum y el Forum forma el gran polo de eventos de la ciudad.",
+  "google_rating": 4.6
+ },
+ {
+  "id": "panteon",
+  "name": "Panteón de San Nicolás",
+  "cat": "monumento",
+  "lat": 21.11266,
+  "lon": -101.67767,
+  "desc": "Cementerio histórico del siglo XIX al sur del centro, con mausoleos de las familias leonesas de la época.",
+  "google_rating": 4.5
+ },
+ {
+  "id": "guadalupe",
+  "name": "Santuario de Nuestra Señora de Guadalupe",
+  "cat": "religioso",
+  "lat": 21.12574,
+  "lon": -101.68811,
+  "desc": "Santuario del Barrio Arriba, uno de los barrios más antiguos de la ciudad, al noroeste de la Catedral.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "madero",
+  "name": "Calle Madero (zona peatonal)",
+  "cat": "paseo",
+  "lat": 21.12063,
+  "lon": -101.67753,
+  "desc": "Eje peatonal que une la Plaza Principal con el Templo Expiatorio y sigue hasta el Arco. Es el paseo comercial clásico del centro.",
+  "google_rating": 4.7
+ },
+ {
+  "id": "chapalita",
+  "name": "Parque Chapalita",
+  "cat": "plaza",
+  "lat": 21.1254,
+  "lon": -101.70032,
+  "desc": "Parque de barrio al poniente del centro, con canchas y arboleda; una de las pocas manchas verdes grandes de esta parte de la ciudad.",
+  "google_rating": 4.4
+ },
+ {
+  "id": "lasalle",
+  "name": "Universidad De La Salle Bajío",
+  "cat": "cultura",
+  "lat": 21.10594,
+  "lon": -101.69521,
+  "desc": "Campus universitario al suroeste del centro, con sus canchas y explanadas fáciles de reconocer en el mapa.",
+  "google_rating": 4.6
+ },
+ {
+  "id": "mariachi",
+  "name": "Plaza del Mariachi",
+  "cat": "plaza",
+  "lat": 21.13618,
+  "lon": -101.691,
+  "desc": "Plaza tradicional del norte del centro donde se contratan mariachis; punto de referencia de la zona.",
+  "google_rating": 4.3
+ },
+ {
+  "id": "san-nicolas",
+  "name": "Templo de San Nicolás de Tolentino",
+  "cat": "religioso",
+  "lat": 21.1329,
+  "lon": -101.68108,
+  "desc": "Templo del barrio de San Nicolás, al norte de la Catedral.",
+  "google_rating": 4.5
+ },
+ {
+  "id": "san-miguel",
+  "name": "Barrio de San Miguel",
+  "cat": "barrio",
+  "lat": 21.10688,
+  "lon": -101.68059,
+  "desc": "Barrio tradicional al sur del centro, de los más antiguos de León, con su templo y su jardín.",
+  "google_rating": 4.6
+ }
+]

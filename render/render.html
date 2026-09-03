@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="/node_modules/cesium/Build/Cesium/Cesium.js"></script>
+<link rel="stylesheet" href="/node_modules/cesium/Build/Cesium/Widgets/widgets.css">
+<style>
+  html,body{margin:0;padding:0;overflow:hidden;background:#000}
+  #c{width:2048px;height:2048px}
+  .cesium-viewer-bottom{display:none}
+</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+// Query params: key, lon, lat (frame origin), h0, heading(deg), pitch(deg), W (meters), u, v (ground offsets in meters along right/forward), D (camera distance), sse
+const q = Object.fromEntries(new URLSearchParams(location.search));
+const KEY = q.key;
+window.STATUS = {ready:false, tilesLoaded:false, error:null, frames:0};
+
+async function main(){
+  const viewer = new Cesium.Viewer('c', {
+    globe:false, skyBox:false, skyAtmosphere:false, baseLayerPicker:false, geocoder:false,
+    homeButton:false, sceneModePicker:false, navigationHelpButton:false, animation:false,
+    timeline:false, fullscreenButton:false, infoBox:false, selectionIndicator:false,
+    requestRenderMode:false, useBrowserRecommendedResolution:false,
+    contextOptions:{webgl:{preserveDrawingBuffer:true, antialias:false, powerPreference:'high-performance'}}
+  });
+  window.viewer = viewer;
+  viewer.resolutionScale = 1.0;
+  viewer.scene.backgroundColor = Cesium.Color.fromCssColorString('#101018');
+  viewer.scene.fog.enabled = false;
+  viewer.scene.postProcessStages.fxaa.enabled = false;
+  viewer.scene.highDynamicRange = false;
+  viewer.scene.light = new Cesium.DirectionalLight({direction: new Cesium.Cartesian3(0.3,-0.5,-0.8)}); // overridden below (flat lighting preferred)
+  viewer.scene.light.intensity = 0; // Google tiles are pre-lit; avoid extra shading
+  viewer.scene.globe = undefined;
+
+  const tileset = await Cesium.Cesium3DTileset.fromUrl(
+    `https://tile.googleapis.com/v1/3dtiles/root.json?key=${KEY}`,
+    { showCreditsOnScreen:false, maximumScreenSpaceError: parseFloat(q.sse||'4'),
+      cacheBytes: 2*1024*1024*1024, maximumCacheOverflowBytes: 1024*1024*1024,
+      skipLevelOfDetail:false, preloadWhenHidden:false, dynamicScreenSpaceError:false,
+      foveatedScreenSpaceError:false });
+  viewer.scene.primitives.add(tileset);
+  window.tileset = tileset;
+
+  // Frame: ENU at origin (lon,lat,h0)
+  const lon = parseFloat(q.lon), lat = parseFloat(q.lat), h0 = parseFloat(q.h0||'1800');
+  const origin = Cesium.Cartesian3.fromDegrees(lon, lat, h0);
+  const enu = Cesium.Transforms.eastNorthUpToFixedFrame(origin);
+  const H = Cesium.Math.toRadians(parseFloat(q.heading||'30'));
+  const P = Cesium.Math.toRadians(parseFloat(q.pitch||'-45'));
+  const W = parseFloat(q.W||'700');
+  const u = parseFloat(q.u||'0'), v = parseFloat(q.v||'0');
+  const D = parseFloat(q.D||'4000');
+
+  // local vectors (x=east,y=north,z=up)
+  const f = new Cesium.Cartesian3(Math.sin(H), Math.cos(H), 0);
+  const r = new Cesium.Cartesian3(Math.cos(H), -Math.sin(H), 0);
+  const z = new Cesium.Cartesian3(0,0,1);
+  const cp = Math.cos(P), sp = Math.sin(P); // P negative -> sp<0
+  const dir = Cesium.Cartesian3.add(Cesium.Cartesian3.multiplyByScalar(f, cp, new Cesium.Cartesian3()),
+                                    Cesium.Cartesian3.multiplyByScalar(z, sp, new Cesium.Cartesian3()), new Cesium.Cartesian3());
+  const up  = Cesium.Cartesian3.add(Cesium.Cartesian3.multiplyByScalar(f, -sp, new Cesium.Cartesian3()),
+                                    Cesium.Cartesian3.multiplyByScalar(z, cp, new Cesium.Cartesian3()), new Cesium.Cartesian3());
+  const G = Cesium.Cartesian3.add(Cesium.Cartesian3.multiplyByScalar(r, u, new Cesium.Cartesian3()),
+                                  Cesium.Cartesian3.multiplyByScalar(f, v, new Cesium.Cartesian3()), new Cesium.Cartesian3());
+  const camLocal = Cesium.Cartesian3.subtract(G, Cesium.Cartesian3.multiplyByScalar(dir, D, new Cesium.Cartesian3()), new Cesium.Cartesian3());
+
+  const toWorld = (vec, isPoint) => {
+    const m = enu;
+    return isPoint ? Cesium.Matrix4.multiplyByPoint(m, vec, new Cesium.Cartesian3())
+                   : Cesium.Matrix4.multiplyByPointAsVector(m, vec, new Cesium.Cartesian3());
+  };
+  const camWorld = toWorld(camLocal, true);
+  const dirWorld = Cesium.Cartesian3.normalize(toWorld(dir,false), new Cesium.Cartesian3());
+  const upWorld  = Cesium.Cartesian3.normalize(toWorld(up,false), new Cesium.Cartesian3());
+
+  const cam = viewer.camera;
+  cam.frustum = new Cesium.OrthographicFrustum({width: W, aspectRatio: 1.0, near: 1.0, far: 50000.0});
+  cam.setView({destination: camWorld, orientation:{direction: dirWorld, up: upWorld}});
+  // Cesium may adjust frustum on resize; re-assert each frame
+  viewer.scene.preRender.addEventListener(()=>{
+    if (cam.frustum instanceof Cesium.OrthographicFrustum){ cam.frustum.width = W; cam.frustum.aspectRatio = 1.0; }
+    window.STATUS.frames++;
+  });
+  viewer.scene.screenSpaceCameraController.enableInputs = false;
+
+  tileset.allTilesLoaded.addEventListener(()=>{ window.STATUS.tilesLoaded = true; });
+  tileset.loadProgress.addEventListener((pending, processing)=>{ window.STATUS.pending = pending; window.STATUS.processing = processing; if (pending>0||processing>0) window.STATUS.tilesLoaded=false; });
+  window.STATUS.ready = true;
+}
+main().catch(e=>{ window.STATUS.error = String(e && e.stack || e); console.error(e); });
+</script>
+</body>
+</html>

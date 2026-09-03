@@ -1,0 +1,439 @@
+[
+ {
+  "sq": [
+   -2,
+   1
+  ],
+  "box": [
+   1020,
+   120,
+   1416,
+   458
+  ],
+  "type": "missing_structure",
+  "severity": 4,
+  "note": "A white rectangular patch replaces surrounding streets and buildings around the church complex. Add the structure that the photo shows there, at the same footprint and height.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -1,
+   1
+  ],
+  "box": [
+   567,
+   998,
+   778,
+   1198
+  ],
+  "type": "wrong_architecture",
+  "severity": 3,
+  "note": "Cathedral rendered with multiple prominent domes, whereas photo shows only a single dome over the crossing. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -1,
+   1
+  ],
+  "box": [
+   1909,
+   1512,
+   2048,
+   1712
+  ],
+  "type": "missing_structure",
+  "severity": 3,
+  "note": "Edge area replaced with flat brown void instead of existing urban blocks and rooftops. Add the structure that the photo shows there, at the same footprint and height.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   1
+  ],
+  "box": [
+   752,
+   1250,
+   1121,
+   1618
+  ],
+  "type": "wrong_ground",
+  "severity": 4,
+  "note": "Arid vacant ground with informal structures is depicted as a landscaped green lawn/park. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   1
+  ],
+  "box": [
+   354,
+   729,
+   603,
+   929
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Built-up residential roofs are replaced by open grass and a pond feature. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   1
+  ],
+  "box": [
+   1014,
+   381,
+   1214,
+   581
+  ],
+  "type": "invented_landmark",
+  "severity": 3,
+  "note": "A church spire/tower is depicted where only low industrial roofs exist in the photo. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   1,
+   1
+  ],
+  "box": [
+   1222,
+   1607,
+   1558,
+   1886
+  ],
+  "type": "wrong_architecture",
+  "severity": 4,
+  "note": "Depicts an elaborate twin-towered golden cathedral instead of the modest red-roofed church in the photo. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   1,
+   1
+  ],
+  "box": [
+   1162,
+   573,
+   1848,
+   992
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Depicted as lush green lawn surrounding the compound, whereas the photo shows dry dirt ground. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   1,
+   1
+  ],
+  "box": [
+   0,
+   814,
+   699,
+   1182
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Drawn as a paved tiled plaza instead of an unpaved dirt field. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   0
+  ],
+  "box": [
+   241,
+   131,
+   520,
+   462
+  ],
+  "type": "wrong_architecture",
+  "severity": 3,
+  "note": "Church is drawn oversized with exaggerated twin towers and an extra detached bell tower not seen in the aerial photo. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   0
+  ],
+  "box": [
+   1416,
+   223,
+   1653,
+   513
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Dense commercial and residential rooftops replaced by open green park lawns and trees. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   0
+  ],
+  "box": [
+   117,
+   442,
+   404,
+   739
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "A large multi-towered cathedral has been added where the aerial photo shows ordinary urban blocks. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   1,
+   0
+  ],
+  "box": [
+   227,
+   115,
+   519,
+   407
+  ],
+  "type": "wrong_architecture",
+  "severity": 4,
+  "note": "Church is depicted with twin tall towers and multiple domes instead of the single tower and dome shown in the aerial photo. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   2,
+   0
+  ],
+  "box": [
+   304,
+   1483,
+   1225,
+   2048
+  ],
+  "type": "missing_structure",
+  "severity": 4,
+  "note": "Dense salvage/bus depot shown as an empty dirt lot without vehicles or yard structures. Add the structure that the photo shows there, at the same footprint and height.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   2,
+   0
+  ],
+  "box": [
+   1162,
+   58,
+   1675,
+   444
+  ],
+  "type": "missing_structure",
+  "severity": 3,
+  "note": "Developed commercial and warehouse zone depicted mostly as flat brown ground with sparse trees. Add the structure that the photo shows there, at the same footprint and height.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   2,
+   0
+  ],
+  "box": [
+   462,
+   710,
+   893,
+   1007
+  ],
+  "type": "wrong_architecture",
+  "severity": 3,
+  "note": "Informal patch of grass and dirt drawn as a marked regulation soccer pitch. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   -1
+  ],
+  "box": [
+   1495,
+   0,
+   1695,
+   184
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Invented church with towers added where aerial photo shows standard low-rise rooftops. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   -1
+  ],
+  "box": [
+   1488,
+   188,
+   1688,
+   388
+  ],
+  "type": "invented_landmark",
+  "severity": 3,
+  "note": "Invented tall church tower where the photo depicts standard residential blocks. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -1,
+   -1
+  ],
+  "box": [
+   690,
+   679,
+   890,
+   879
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Twin-towered colonial church drawn over ordinary residential houses. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -1,
+   -1
+  ],
+  "box": [
+   1236,
+   283,
+   1436,
+   483
+  ],
+  "type": "wrong_architecture",
+  "severity": 4,
+  "note": "Drawn as a baroque twin-tower cathedral instead of modern white peaked structure. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   -1
+  ],
+  "box": [
+   529,
+   786,
+   768,
+   1015
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Invented multi-towered cathedral drawn over standard residential rooftops. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   -1
+  ],
+  "box": [
+   1351,
+   0,
+   1884,
+   252
+  ],
+  "type": "wrong_architecture",
+  "severity": 3,
+  "note": "Depicted as a classical arena with a grass pitch instead of an open dirt lot. Match the real architecture shown in the close-up: shape of towers, domes or spires, roof and wall colours.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   1,
+   -1
+  ],
+  "box": [
+   1623,
+   1134,
+   1839,
+   1365
+  ],
+  "type": "invented_landmark",
+  "severity": 3,
+  "note": "Prominent twin-towered church drawn where aerial photo shows low commercial buildings and trees. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ }
+]

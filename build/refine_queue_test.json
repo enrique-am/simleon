@@ -1,0 +1,78 @@
+[
+ {
+  "sq": [
+   -2,
+   1
+  ],
+  "box": [
+   1061,
+   154,
+   1376,
+   421
+  ],
+  "type": "wrong_size",
+  "severity": 4,
+  "note": "Cathedral is depicted disproportionately large and tall with twin towers compared to the modest church complex in the photo.",
+  "closeup": true,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   -2,
+   1
+  ],
+  "box": [
+   432,
+   859,
+   632,
+   1059
+  ],
+  "type": "wrong_ground",
+  "severity": 3,
+  "note": "Depicted as a green lawn/park where the aerial photo shows dense rooftops. Draw bare tan/brown dirt or rooftops as in the photo, not grass.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   1
+  ],
+  "box": [
+   70,
+   272,
+   332,
+   480
+  ],
+  "type": "invented_landmark",
+  "severity": 4,
+  "note": "Large twin-towered cathedral depicted where photo shows standard low-rise residential buildings. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ },
+ {
+  "sq": [
+   0,
+   1
+  ],
+  "box": [
+   1435,
+   844,
+   1635,
+   1044
+  ],
+  "type": "invented_landmark",
+  "severity": 3,
+  "note": "Historic tower structure added where aerial photo shows ordinary urban blocks. Remove the invented landmark entirely and draw the ordinary low buildings and streets exactly as the photo shows.",
+  "closeup": false,
+  "n": 2,
+  "source": "detect",
+  "done": true
+ }
+]
