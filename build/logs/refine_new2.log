@@ -1,0 +1,78 @@
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 52.8s (waited 32.5s)
+total 53 s
+  cand 0: judge=7.0 ['Minor simplifications in the parking lot surface details and adjacent structure connections.']
+  cand 1: judge=7.0 ['Commercial building roof and footprint correctly replace the previous stadium rendering', 'Minor simplifications to surrounding building outlines and parking lot details']
+refined sq (1, 4) box (1367, 519, 1794, 806): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['Visible rectangular seam along the edges of the corrected region', 'Shrub placement is somewhat generic compared to the aerial image']
+  cand 1: judge=7.0 ['The previously reported church has been removed and the area correctly depicts open scrubland, though vegetation clumps are somewhat simplified.']
+refined sq (2, 4) box (836, 517, 1168, 817): judge 7.0 ($0.268)
+  cand 0: judge=5.0 ['The source photo is heavily occluded by a 3D mesh distortion in this corner, making exact building layouts unverifiable, though generic residential structures are now depicted instead of a landmark.']
+  cand 1: judge=5.0 ['The underlying aerial image is heavily obscured by a capture artifact in this corner, making verification impossible and resulting in speculative building layouts.']
+refined sq (3, 4) box (0, 1474, 1078, 2048): judge 5.0 ($0.268)
+  cand 0: judge=5.0 ['The dirt lot is now represented instead of a green park, but the prominent arched building/church in the center of the parcel is missing.']
+  cand 1: judge=5.0 ['The prominent vaulted building located in the center of the lot in the aerial photo is missing and replaced by flat ground.']
+refined sq (-3, 3) box (358, 1447, 698, 1749): judge 5.0 ($0.268)
+  cand 0: judge=4.0 ['The open sports court with bleachers and long white canopy in the photo has been replaced with generic low buildings and an invented street.', 'Building footprints and open ground layout in the central parcel do not match the aerial reference.']
+  cand 1: judge=4.0 ['The open sports lot, bleachers, and long canopy are incorrectly depicted as a dense block of residential houses.', 'A central alleyway was added where flat paved grounds exist in reality.']
+refined sq (-2, 3) box (1292, 372, 1612, 608): judge 4.0 ($0.268)
+  cand 0: judge=7.0 ['Minor simplifications in the parking lot shape and surrounding small auxiliary structures.']
+  cand 1: judge=7.0 ['The large warehouse roof is depicted with segmented gables rather than a flat surface.', 'Parking lot spaces and vehicles to the west of the warehouse are simplified into empty paved ground.']
+refined sq (0, 3) box (682, 1707, 1060, 2048): judge 7.0 ($0.268)
+  cand 0: judge=3.0 ['Residential buildings and streets are depicted in an area that is entirely open dirt field in the reference photo.']
+  cand 1: judge=3.0 ['Invented residential buildings placed on open ground that is completely empty dirt in the aerial photo']
+refined sq (5, 3) box (1658, 251, 1912, 535): judge 3.0 ($0.268)
+  cand 0: judge=7.0 ['Minor structural simplifications of roof shapes and footprints in the dense residential blocks']
+  cand 1: judge=7.0 ['Minor rooftop layout and height simplifications across the central residential block']
+refined sq (5, 3) box (362, 844, 571, 1047): judge 7.0 ($0.268)
+  cand 0: judge=6.0 ['Unrealistic white tiered pattern drawn on the open ground in the lower section of the mask.']
+  cand 1: judge=7.0 ['Minor discrepancies in the exact footprint and heights of the low-rise structures along the street.']
+refined sq (-4, 2) box (1514, 1119, 1733, 1356): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['Minor discrepancies in roof layout and fine building footprints within the central blocks', 'Some simplified building alignments along the street frontages']
+  cand 1: judge=7.0 ['A white outline artifact surrounds the central block', 'Minor roof footprint simplifications compared to the aerial reference']
+refined sq (-4, 1) box (962, 579, 1345, 915): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['Minor structural simplifications on some surrounding residential rooftops', 'Dirt path details within the central empty lot are slightly generalized']
+  cand 1: judge=7.0 []
+refined sq (-4, 1) box (1351, 462, 1839, 827): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['The cathedral was successfully removed and replaced with the correct complex matching the photo, though minor details in the roof geometry remain slightly simplified.']
+  cand 1: judge=7.0 ['The cathedral has been completely removed and correctly replaced with the red-roofed commercial complex matching the photo.', 'Minor simplifications in roof geometry and surrounding lot boundaries.']
+refined sq (4, 1) box (534, 1261, 849, 1520): judge 7.0 ($0.268)
+  cand 0: judge=5.0 ['Building footprints and layout do not accurately align with the aerial photo', 'Open dirt lot present in the reference is largely omitted or mischaracterized with incorrect structures']
+  cand 1: judge=6.0 ['Omitted the central transit station structure located on the main road', 'Overly simplified empty lot boundaries and road layout']
+refined sq (-5, 0) box (1858, 1102, 2048, 1326): judge 6.0 ($0.268)
+  cand 0: judge=7.0 ['Courtyard is missing the prominent central tree', 'Roof geometry and pitch on the main hall slightly differ from the flat-to-shallow profile in the photo']
+  cand 1: judge=7.0 ['The twin-towered church was successfully removed and replaced with the correct school complex and courtyard.', 'Minor geometry simplifications on the sports court and adjoining roof sections.']
+refined sq (-4, 0) box (1303, 1421, 1526, 1670): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['The twin-towered church has been removed and replaced with the correct low-to-mid-rise buildings', 'Minor simplifications present in some rooftop shapes and textures']
+  cand 1: judge=7.0 ['Minor simplifications in roof textures and building alignments within the central complex']
+refined sq (-3, 0) box (962, 799, 1191, 1000): judge 7.0 ($0.268)
+  cand 0: judge=5.0 ['The central complex around the courtyard is broken into small individual houses instead of a continuous perimeter building', 'The large adjacent hall/warehouse structure to the northwest of the courtyard is missing']
+  cand 1: judge=7.0 ['Invented church towers have been removed and replaced with accurate low-rise structures matching the aerial layout.', 'Minor variations in rooftop divisions and small structure footprints surrounding the central courtyard.']
+refined sq (3, 0) box (1132, 853, 1427, 1151): judge 7.0 ($0.268)
+  cand 0: judge=3.0 ['The masked area incorrectly depicts dense residential houses instead of the long, red-roofed school buildings and courtyard shown in the aerial photograph.']
+  cand 1: judge=6.0 ['The previously reported gothic church issue is resolved, showing standard structures instead.', 'Footprints and geometries of some central facility buildings deviate slightly from the aerial layout.']
+refined sq (4, 0) box (1579, 741, 1779, 947): judge 6.0 ($0.268)
+  cand 0: judge=3.0 ['The large U-shaped institutional building was not removed; it still replaces the modest residential rows and vacant lot seen in the photo.']
+  cand 1: judge=6.0 ['The dark empty lot from the photo is filled with houses in the redrawing', 'Orientation and layout of the residential rows deviate slightly from the photo']
+refined sq (-5, -1) box (104, 0, 464, 168): judge 6.0 ($0.268)
+  cand 0: judge=7.0 ['Parked trailers and vehicle rows in the central lot are simplified or missing', 'Dirt field tracks and textures are somewhat generalized']
+  cand 1: judge=7.0 ['The small green sports pitch adjacent to the large warehouse was drawn as bare ground', 'Minor geometric simplifications of ground paths and vehicle layouts']
+refined sq (-4, -1) box (0, 1467, 474, 2028): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['The cathedral has been removed and replaced with low-rise buildings matching the photo.', 'Minor simplifications and slight footprint discrepancies remain among small residential rooftops.']
+  cand 1: judge=7.0 ['Minor simplifications of smaller roof shapes and courtyards within the central residential block.']
+refined sq (-3, -1) box (581, 775, 817, 1014): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['The sports stadium was successfully removed.', 'Footprints and wall partitions inside the industrial lot differ slightly from the aerial reference.']
+  cand 1: judge=6.0 ['The sports stadium was removed, but additional small commercial buildings and parking layouts were introduced inside the yard instead of maintaining the mostly open concrete expanse shown in the reference.']
+refined sq (4, -1) box (1714, 694, 1981, 894): judge 7.0 ($0.268)
+  cand 0: judge=6.0 ['Invented tower was removed, but dense green trees were added along the field boundary where only a bare embankment exists.', 'Minor layout differences in the residential block footprints.']
+  cand 1: judge=6.0 ['The tall landmark tower has been removed, matching the residential layout better', 'Minor stylized architectural details persist that do not fully match the aerial reference']
+refined sq (4, -1) box (468, 557, 668, 869): judge 6.0 ($0.268)
+  cand 0: judge=6.0 ['Trees and surrounding vegetation around the monument tower are missing.']
+  cand 1: judge=7.0 ["The prominent monument tower has been accurately added matching the photo's footprint and structure", 'Dense trees surrounding the monument in the park area are missing']
+refined sq (-4, -2) box (175, 164, 375, 367): judge 7.0 ($0.268)
+  cand 0: judge=3.0 ['The large open dirt lot shown in the aerial photo is replaced with invented buildings and roads.']
+  cand 1: judge=6.0 ['Invented structures (triangular building and shed) encroach on the northern edge of the open field', 'Fictional perimeter walls enclose portions of the dirt lot']
+refined sq (2, -2) box (680, 358, 1305, 841): judge 6.0 ($0.268)
+  cand 0: judge=7.0 ['The cathedral complex has been removed and replaced with the correct industrial/residential layout', 'Minor structural simplifications along the central ruined/demolished building outlines']
+  cand 1: judge=7.0 ['The cathedral complex has been removed, but the area contains an un-stylized aerial image cutout rather than a completed redrawing.']
+refined sq (2, -2) box (860, 1314, 1318, 1702): judge 7.0 ($0.268)

@@ -1,0 +1,106 @@
+sq (-2, 1): 1 regions, 1 queued ['missing_structure(4)']
+sq (-1, 1): 2 regions, 2 queued ['wrong_architecture(3)', 'missing_structure(3)']
+sq (0, 1): 4 regions, 3 queued ['wrong_ground(4)', 'wrong_ground(3)', 'invented_landmark(3)', 'wrong_ground(3)']
+sq (1, 1): 3 regions, 3 queued ['wrong_architecture(4)', 'wrong_ground(3)', 'wrong_ground(3)']
+sq (2, 1): 0 regions, 0 queued []
+sq (-2, 0): 2 regions, 2 queued ['wrong_architecture(3)', 'wrong_ground(3)']
+sq (-1, 0): 0 regions, 0 queued []
+sq (0, 0): 1 regions, 1 queued ['invented_landmark(4)']
+sq (1, 0): 1 regions, 1 queued ['wrong_architecture(4)']
+sq (2, 0): 3 regions, 3 queued ['missing_structure(4)', 'missing_structure(3)', 'wrong_architecture(3)']
+sq (-2, -1): 2 regions, 2 queued ['invented_landmark(4)', 'invented_landmark(3)']
+sq (-1, -1): 2 regions, 2 queued ['invented_landmark(4)', 'wrong_architecture(4)']
+sq (0, -1): 2 regions, 2 queued ['invented_landmark(4)', 'wrong_architecture(3)']
+sq (1, -1): 1 regions, 1 queued ['invented_landmark(3)']
+sq (2, -1): 0 regions, 0 queued []
+23 jobs in /root/simleon/build/refine_queue.json (~$6.16 to run)
+  cand 0: judge=7.0 ['Minor geometric simplifications of individual rooflines and footprints around the church complex.']
+  cand 1: judge=7.0 ['Minor alignment and structural simplifications on surrounding rooftops relative to the reference photo.']
+refined sq (-2, 1) box (1020, 120, 1416, 458): judge 7.0 ($0.268)
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 78.1s (waited 44.5s)
+total 78 s
+  cand 0: judge=6.0 ['Cathedral still depicts a prominent secondary dome alongside the main dome', 'Secondary dome height and scale are slightly exaggerated compared to the photo']
+  cand 1: judge=4.0 ['The cathedral still features two prominent green domes instead of accurately depicting the single main dome over the crossing.', 'The secondary dome structure remains oversized and overly prominent compared to the aerial photo.']
+refined sq (-1, 1) box (567, 998, 778, 1198): judge 6.0 ($0.268)
+  cand 0: judge=7.0 ['Slight inaccuracies in building footprints and vacant lot boundaries along the far right edge']
+  cand 1: judge=6.0 ['Open unpaved lot to the right of the church has been filled with buildings instead of remaining open ground', 'Minor roof footprint and shape inaccuracies across the urban block']
+refined sq (-1, 1) box (1909, 1512, 2048, 1712): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['The southern section of the open ground in the photo features a steep vegetated slope rather than flat dirt with scattered structures', 'Several trees in the middle of the vacant lot are omitted']
+  cand 1: judge=7.0 ['Minor structural footprint mismatches along the dense edges bordering the open ground']
+refined sq (0, 1) box (752, 1250, 1121, 1618): judge 7.0 ($0.268)
+  cand 0: judge=5.0 ['The green rectangular sports pitch in the upper portion of the masked area is missing and drawn as bare ground', 'A large flat green vertical patch is rendered on the western edge where residential rooftops actually exist']
+  cand 1: judge=5.0 ['The green sports pitch near the top of the masked area is incorrectly depicted as residential buildings.', 'The large roadside billboard structure is missing.']
+refined sq (0, 1) box (354, 729, 603, 929): judge 5.0 ($0.268)
+  cand 0: judge=7.0 ['Minor roof partition and structure simplifications within the central industrial complex']
+  cand 1: judge=7.0 ['The previously reported spire/tower has been removed, and the low industrial roofs now align well with the photo.', 'Minor simplifications in roof geometry and internal courtyards remain.']
+refined sq (0, 1) box (1014, 381, 1214, 581): judge 7.0 ($0.268)
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 93.4s (waited 48s)
+total 93 s
+  cand 0: judge=7.0 ['The previous church issue is resolved, with roof shapes and compound layout accurately matching the aerial photo', 'Minor vegetation and courtyard boundary approximations remain around the central complex']
+  cand 1: judge=6.0 ['A central dome has been added to the church roof that is not present in the aerial photo', 'A pointed tower spire was added to the northern wing of the complex']
+refined sq (1, 1) box (1222, 1607, 1558, 1886): judge 7.0 ($0.268)
+  cand 0: judge=6.0 ['Dirt ground inside the compound is improved, but bright green strips remain along the outer perimeter where the photo shows dry ground.']
+  cand 1: judge=6.0 ['Dry dirt was added inside the compound, but thick green borders still surround the perimeter where dry ground and roads exist.']
+refined sq (1, 1) box (1162, 573, 1848, 992): judge 6.0 ($0.268)
+  cand 0: judge=6.0 ['The open dirt field is correctly depicted, but several small sheds and structures inside the lot do not match the aerial image', 'Visible boundary seams along the masked patch edge']
+  cand 1: judge=5.0 ['The dirt field fix is applied, but the small red-roofed church structure within the field is missing.', 'Internal ground details and trees around the field edge are omitted, leaving a flat texture with visible patch border lines.']
+refined sq (1, 1) box (0, 814, 699, 1182): judge 6.0 ($0.268)
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 93.9s (waited 54s)
+total 94 s
+  cand 0: judge=6.0 ['A prominent bell tower is included on the facade that is not evident in the aerial photo', 'Several roofed structures to the north and east of the church are simplified into open ground']
+  cand 1: judge=7.0 ['Minor structural simplifications on the surrounding roofs and rear annex of the church']
+refined sq (-2, 0) box (241, 131, 520, 462): judge 7.0 ($0.268)
+  cand 0: judge=4.0 ['Dense rooftops in the central area are largely missing and replaced with flat open dirt ground.', 'A prominent large tree present in the original aerial photo is absent.']
+  cand 1: judge=7.0 ['Large tree beside the central building is substantially reduced in scale', 'Several dense small rooftops and interior structures are simplified into open ground']
+refined sq (-2, 0) box (1416, 223, 1653, 513): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['Invented cathedral has been removed and replaced with appropriate urban blocks', 'Minor simplifications in roof profiles and courtyard shapes relative to the aerial photo']
+  cand 1: judge=7.0 ['Minor structural simplifications and footprint misalignments among warehouse roofs and small residential buildings']
+refined sq (0, 0) box (117, 442, 404, 739): judge 7.0 ($0.268)
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 87.6s (waited 46s)
+total 88 s
+  cand 0: judge=4.0 ['The church still features twin towers rather than the single tower requested in the feedback.']
+  cand 1: judge=3.0 ['The issue persists: the church still features an extra tall rear tower and an invented large dome over the adjoining building not present in the aerial photo.']
+refined sq (1, 0) box (227, 115, 519, 407): judge 4.0 ($0.268)
+  cand 0: judge=7.0 ['Depot vehicle density and small yard sheds match reasonably well, though some vehicle orientations and yard markings differ slightly from the photo', 'Empty lot adjacent to the depot has some added trailers not present in the original aerial view']
+  cand 1: judge=6.0 ['Depot now includes vehicles, but the adjacent vacant dark field to the right is incorrectly filled with parked vehicles and storage containers', "A large rectangular building was added on the depot's western edge that does not match the footprints in the reference photo"]
+refined sq (2, 0) box (304, 1483, 1225, 2048): judge 7.0 ($0.268)
+  cand 0: judge=4.0 ['Replaced the actual mix of smaller buildings and compounds with an inaccurate, large-scale logistics facility and loading docks.', 'Building footprints and layouts do not match the aerial reference.']
+  cand 1: judge=6.0 ['Portions of the interior warehouse lots remain rendered as open dirt rather than capturing all minor structures and enclosures shown in the photo.']
+refined sq (2, 0) box (1162, 58, 1675, 444): judge 6.0 ($0.268)
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 106.0s (waited 61s)
+total 106 s
+  cand 0: judge=7.0 ['Tree coverage along the southern and western margins of the field is simplified compared to the dense canopy in the aerial view.']
+  cand 1: judge=6.0 ['The dense tree canopy along the southwest edge of the central field is significantly underrepresented.', 'The patchy grass and dirt distribution in the central field only loosely approximates the real surface pattern.']
+refined sq (2, 0) box (462, 710, 893, 1007): judge 7.0 ($0.268)
+  cand 0: judge=6.0 ['Slight simplification of individual rooftop footprints and rooftop structures compared to the aerial image.']
+  cand 1: judge=7.0 ['Minor simplifications of roof shapes and lot boundaries relative to the aerial photo']
+refined sq (-2, -1) box (1495, 0, 1695, 184): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['Minor simplifications in roof shapes and courtyard boundaries compared to the reference photo.']
+  cand 1: judge=7.0 ['Minor geometric simplifications on some inner rooftop shapes', 'Invented church tower successfully removed and replaced with accurate residential structure']
+refined sq (-2, -1) box (1488, 188, 1688, 388): judge 7.0 ($0.268)
+  cand 0: judge=4.0 ['The prominent tree cluster and large tree in the center are mostly missing and replaced with open ground', 'Building footprints and the large flat-roofed structure southeast of center are inaccurate or missing']
+  cand 1: judge=6.0 ['Central tree cluster omitted and replaced with building footprints', 'Building shapes in the center remain somewhat generalized']
+refined sq (-1, -1) box (690, 679, 890, 879): judge 6.0 ($0.268)
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 84.2s (waited 50.5s)
+total 84 s
+  cand 0: judge=7.0 ['The modern white peaked structure has been accurately represented, resolving the previous issue.', 'Minor simplifications in roof geometry and adjoining plaza detailing.']
+  cand 1: judge=7.0 ['The modern peaked church architecture is correctly represented and the previous issue is resolved', 'Minor simplifications in the adjacent plaza landscaping and surrounding wing structures']
+refined sq (-1, -1) box (1236, 283, 1436, 483): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['Roof forms and colors on the central complex differ slightly from the flat concrete roofs visible in the aerial photo.']
+  cand 1: judge=6.0 ['The cathedral has been removed, but building footprints and heights in the central cluster remain overly simplified geometric approximations of the actual structures.']
+refined sq (0, -1) box (529, 786, 768, 1015): judge 7.0 ($0.268)
+[page] Failed to load resource: the server responded with a status of 404 (File not found)
+rendered 0,0 in 119.6s (waited 76s)
+total 120 s
+  cand 0: judge=5.0 ['Stadium geometry is depicted as a classical Roman arena rather than modern rectangular stands with long straight roof canopies', 'Surrounding bleachers and perimeter walls deviate from the layout visible in the aerial imagery']
+  cand 1: judge=7.0 ['Pitch surface correctly matches the dirt ground, though some grandstand structural details remain slightly generalized.']
+refined sq (0, -1) box (1351, 0, 1884, 252): judge 7.0 ($0.268)
+  cand 0: judge=7.0 ['Minor simplification of tree canopy outlines and dirt path contours within the park area']
+  cand 1: judge=7.0 ['Tree canopy layouts and small pathways in the central plaza are slightly simplified compared to the photo.']
+refined sq (1, -1) box (1623, 1134, 1839, 1365): judge 7.0 ($0.268)

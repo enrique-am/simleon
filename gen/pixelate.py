@@ -74,6 +74,25 @@ JUDGE_MODEL = 'gemini-flash-latest'
 
 PROMPT = (Path(__file__).parent/'prompt.txt').read_text().strip()
 
+# ---- daily image-quota budget (Gemini applies a per-day cap per project on the image model) ----
+QUOTA_PATH = ROOT / 'build/quota.json'
+DAILY_BUDGET = int(os.environ.get('NB_DAILY_BUDGET', '240'))
+class QuotaExhausted(Exception): pass
+def _utc_day(): return time.strftime('%Y-%m-%d', time.gmtime())
+def quota_used():
+    try: return json.load(open(QUOTA_PATH)).get(_utc_day(), 0)
+    except Exception: return 0
+def quota_left(): return DAILY_BUDGET - quota_used()
+def quota_bump(n=1):
+    try: d = json.load(open(QUOTA_PATH))
+    except Exception: d = {}
+    d[_utc_day()] = d.get(_utc_day(), 0) + n
+    QUOTA_PATH.parent.mkdir(exist_ok=True); json.dump(d, open(QUOTA_PATH, 'w'))
+def quota_guard():
+    """Raise before spending a call we know the daily cap will refuse."""
+    if quota_left() <= 0:
+        raise QuotaExhausted(f'daily image budget spent ({quota_used()}/{DAILY_BUDGET} on {_utc_day()})')
+
 def b64img(path, max_side=1536):
     im = Image.open(path).convert('RGB')
     if max(im.size) > max_side:
@@ -82,6 +101,7 @@ def b64img(path, max_side=1536):
     return base64.b64encode(buf.getvalue()).decode()
 
 def generate(src, anchor=None, size='2K', prompt=PROMPT, retries=4):
+    quota_guard()
     parts = []
     if anchor:
         parts.append({'text': 'REFERENCE STYLE (already-drawn neighbouring square of the same map — match its palette, pixel density, line weight and lighting exactly):'})
@@ -97,6 +117,7 @@ def generate(src, anchor=None, size='2K', prompt=PROMPT, retries=4):
         try:
             with urllib.request.urlopen(req, timeout=300) as r:
                 res = json.load(r)
+            quota_bump()
             for p in res['candidates'][0]['content']['parts']:
                 if 'inlineData' in p:
                     return base64.b64decode(p['inlineData']['data']), res.get('usageMetadata',{})

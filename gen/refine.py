@@ -62,6 +62,7 @@ def to_b64(im, side=1024):
     buf = io.BytesIO(); im.save(buf, 'PNG', optimize=True); return base64.b64encode(buf.getvalue()).decode()
 
 def generate_region(art_crop, photo_crop, mask_img, note, refs, closeup=None):
+    P.quota_guard()
     parts = [{'inline_data': {'mime_type': 'image/png', 'data': to_b64(art_crop)}},
              {'inline_data': {'mime_type': 'image/png', 'data': to_b64(photo_crop)}},
              {'inline_data': {'mime_type': 'image/png', 'data': to_b64(mask_img)}}]
@@ -81,6 +82,7 @@ def generate_region(art_crop, photo_crop, mask_img, note, refs, closeup=None):
     for attempt in range(4):
         try:
             with urllib.request.urlopen(req, timeout=300) as r: res = json.load(r)
+            P.quota_bump()
             for p in res['candidates'][0]['content']['parts']:
                 if 'inlineData' in p: return Image.open(io.BytesIO(base64.b64decode(p['inlineData']['data']))).convert('RGB')
             raise RuntimeError('no image: ' + json.dumps(res)[:300])
@@ -147,7 +149,10 @@ if __name__ == '__main__':
         jobs = json.load(open(a.queue))
         for jb in jobs:
             if jb.get('done'): continue
-            refine(tuple(jb['sq']), tuple(jb['box']), jb.get('note', ''), jb.get('poi'), jb.get('closeup', False), jb.get('n', 2), source=jb.get('source', 'queue'))
+            try:
+                refine(tuple(jb['sq']), tuple(jb['box']), jb.get('note', ''), jb.get('poi'), jb.get('closeup', False), jb.get('n', 2), source=jb.get('source', 'queue'))
+            except P.QuotaExhausted as e:
+                print('QUOTA:', e, '- stopping cleanly, rerun after reset', file=sys.stderr); sys.exit(75)
             jb['done'] = True; json.dump(jobs, open(a.queue, 'w'), indent=1)
     else:
         refine(tuple(map(int, a.sq.split(','))), tuple(map(int, a.box.split(','))), a.note, a.poi, a.closeup, a.n, a.dry)

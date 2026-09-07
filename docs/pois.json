@@ -8,9 +8,9 @@
   "desc": "La catedral de León. Su construcción arrancó a mediados del siglo XVIII y tardó más de un siglo en terminarse; el estilo es barroco con torres neoclásicas. Es el punto de referencia del Centro Histórico y el edificio que más se reconoce desde el aire por su cúpula y sus dos torres.",
   "google_rating": 4.8,
   "x": 8715,
-  "y": 7336,
+  "y": 13480,
   "nx": 0.38685,
-  "ny": 0.51171
+  "ny": 0.6582
  },
  {
   "id": "arco",
@@ -21,9 +21,9 @@
   "desc": "El símbolo de León. Se levantó a finales del siglo XIX y el león de bronce que lo corona llegó en la década de 1940. Remata la Calzada de los Héroes, el paseo que conecta el Centro con la zona del estadio y el Forum.",
   "google_rating": 4.8,
   "x": 10546,
-  "y": 9211,
+  "y": 15355,
   "nx": 0.46811,
-  "ny": 0.64252
+  "ny": 0.74976
  },
  {
   "id": "expiatorio",
@@ -34,9 +34,9 @@
   "desc": "Templo neogótico iniciado en 1921 y construido durante casi un siglo, en buena parte con donativos de los leoneses. Bajo el templo hay catacumbas visitables. Sus agujas son de lo más alto del centro y salen muy bien en pixel art.",
   "google_rating": 4.8,
   "x": 10069,
-  "y": 8696,
+  "y": 14840,
   "nx": 0.44694,
-  "ny": 0.60655
+  "ny": 0.72459
  },
  {
   "id": "doblado",
@@ -47,9 +47,9 @@
   "desc": "Teatro decimonónico de estilo neoclásico, inaugurado en 1880 y remodelado en los años setenta. Sede histórica de ópera, conciertos y del Festival Internacional de Arte Contemporáneo.",
   "google_rating": 4.7,
   "x": 9092,
-  "y": 7685,
+  "y": 13829,
   "nx": 0.40361,
-  "ny": 0.53606
+  "ny": 0.67524
  },
  {
   "id": "palacio",
@@ -60,9 +60,9 @@
   "desc": "Sede del ayuntamiento, frente a la Plaza Principal. Edificio de cantera con portales; desde aquí se administra la ciudad que en el juego estaríamos construyendo.",
   "google_rating": 4.2,
   "x": 8112,
-  "y": 7566,
+  "y": 13710,
   "nx": 0.36008,
-  "ny": 0.52776
+  "ny": 0.66943
  },
  {
   "id": "fundadores",
@@ -73,9 +73,9 @@
   "desc": "Plaza junto a la Catedral que recuerda la fundación de la Villa de León en 1576. Punto de encuentro y arranque de la zona peatonal.",
   "google_rating": 4.6,
   "x": 8275,
-  "y": 7415,
+  "y": 13559,
   "nx": 0.36733,
-  "ny": 0.51725
+  "ny": 0.66207
  },
  {
   "id": "plaza-principal",
@@ -86,9 +86,9 @@
   "desc": "El zócalo de León, rodeado de portales, con su kiosco y las jardineras que en el mapa se ven como manchas verdes perfectamente cuadradas. Aquí empieza la calle Madero.",
   "google_rating": 4.7,
   "x": 8292,
-  "y": 7705,
+  "y": 13849,
   "nx": 0.36808,
-  "ny": 0.53745
+  "ny": 0.67622
  },
  {
   "id": "sagrario",
@@ -99,9 +99,9 @@
   "desc": "Una de las parroquias más antiguas de la ciudad, a un costado de la Plaza Principal, con fachada barroca de cantera rosa.",
   "google_rating": 4.6,
   "x": 8226,
-  "y": 7510,
+  "y": 13654,
   "nx": 0.36512,
-  "ny": 0.52383
+  "ny": 0.66668
  },
  {
   "id": "angeles",
@@ -112,9 +112,9 @@
   "desc": "Templo barroco del siglo XVIII con una de las fachadas más elaboradas del centro, unas cuadras al norte de la Catedral.",
   "google_rating": 4.7,
   "x": 8700,
-  "y": 6989,
+  "y": 13133,
   "nx": 0.38618,
-  "ny": 0.48754
+  "ny": 0.64128
  },
  {
   "id": "corazon-maria",
@@ -125,9 +125,9 @@
   "desc": "Templo de cantera con dos torres esbeltas, entre la Catedral y el Barrio Arriba.",
   "google_rating": 4.7,
   "x": 8416,
-  "y": 7196,
+  "y": 13340,
   "nx": 0.37358,
-  "ny": 0.50196
+  "ny": 0.65138
  },
  {
   "id": "san-juan",
@@ -138,9 +138,9 @@
   "desc": "Templo y plaza del barrio de San Juan de Dios, al sur del centro, en el camino hacia el Panteón de San Nicolás.",
   "google_rating": 4.7,
   "x": 8337,
-  "y": 8826,
+  "y": 14970,
   "nx": 0.37009,
-  "ny": 0.61567
+  "ny": 0.73097
  },
  {
   "id": "museo-ciudad",
@@ -151,9 +151,9 @@
   "desc": "Casona del centro que resguarda la historia de León: de villa ganadera a capital del calzado. Buena parada para entender qué estamos viendo en el mapa.",
   "google_rating": 4.6,
   "x": 9300,
-  "y": 7774,
+  "y": 13918,
   "nx": 0.41282,
-  "ny": 0.54227
+  "ny": 0.67959
  },
  {
   "id": "mil",
@@ -164,9 +164,9 @@
   "desc": "Museo dedicado a lo que hace leonés a un leonés: el calzado, la piel, la Feria, el futbol y las tradiciones de barrio.",
   "google_rating": 4.5,
   "x": 7685,
-  "y": 7487,
+  "y": 13631,
   "nx": 0.34112,
-  "ny": 0.52223
+  "ny": 0.66556
  },
  {
   "id": "casa-cultura",
@@ -177,9 +177,9 @@
   "desc": "Centro cultural municipal a espaldas de la Catedral, con talleres, exposiciones y un patio central.",
   "google_rating": 4.5,
   "x": 8371,
-  "y": 7360,
+  "y": 13504,
   "nx": 0.37158,
-  "ny": 0.51336
+  "ny": 0.65935
  },
  {
   "id": "arte-sacro",
@@ -190,9 +190,9 @@
   "desc": "Colección de arte religioso virreinal en el conjunto de la Catedral.",
   "google_rating": 4.6,
   "x": 8920,
-  "y": 7205,
+  "y": 13349,
   "nx": 0.39594,
-  "ny": 0.50261
+  "ny": 0.65183
  },
  {
   "id": "comonfort",
@@ -203,9 +203,9 @@
   "desc": "Mercado tradicional al poniente del centro; junto con el Aldama, el lugar de las guacamayas, la cecina y las nieves.",
   "google_rating": 4.2,
   "x": 7316,
-  "y": 7468,
+  "y": 13612,
   "nx": 0.32476,
-  "ny": 0.5209
+  "ny": 0.66463
  },
  {
   "id": "aldama",
@@ -216,9 +216,9 @@
   "desc": "Mercado popular del centro, famoso por la comida típica leonesa. Desde el aire es una de las naves grandes con techo claro.",
   "google_rating": 4.3,
   "x": 7382,
-  "y": 7206,
+  "y": 13350,
   "nx": 0.3277,
-  "ny": 0.50268
+  "ny": 0.65187
  },
  {
   "id": "coecillo",
@@ -229,9 +229,9 @@
   "desc": "Uno de los barrios fundacionales de León, de origen indígena, al oriente del centro. Su templo de San Francisco de Asís es el corazón del barrio.",
   "google_rating": 4.7,
   "x": 12506,
-  "y": 8455,
+  "y": 14599,
   "nx": 0.55512,
-  "ny": 0.58975
+  "ny": 0.71282
  },
  {
   "id": "calzada",
@@ -242,9 +242,9 @@
   "desc": "Paseo arbolado que va del Arco hacia el oriente, bordeado de fuentes y monumentos. En el mapa es la franja verde recta que corta la trama en diagonal.",
   "google_rating": 4.7,
   "x": 12118,
-  "y": 10124,
+  "y": 16268,
   "nx": 0.53793,
-  "ny": 0.70618
+  "ny": 0.79433
  },
  {
   "id": "plaza-piel",
@@ -255,9 +255,9 @@
   "desc": "Corazón de la Zona Piel, el distrito de zapaterías y marroquinerías junto a la Central de Autobuses. León produce buena parte del calzado de México y aquí se vende.",
   "google_rating": 4.4,
   "x": 12914,
-  "y": 10109,
+  "y": 16253,
   "nx": 0.57324,
-  "ny": 0.70516
+  "ny": 0.79361
  },
  {
   "id": "central",
@@ -268,9 +268,9 @@
   "desc": "La terminal de autobuses foráneos de León. Su enorme techo es una de las formas más fáciles de ubicar en la zona oriente del mapa.",
   "google_rating": 4.3,
   "x": 13693,
-  "y": 9887,
+  "y": 16031,
   "nx": 0.6078,
-  "ny": 0.68965
+  "ny": 0.78275
  },
  {
   "id": "estadio",
@@ -281,9 +281,9 @@
   "desc": "Casa del Club León desde 1967. El óvalo verde del estadio es el objeto más grande y reconocible del mapa fuera del centro.",
   "google_rating": 4.7,
   "x": 13780,
-  "y": 11218,
+  "y": 17362,
   "nx": 0.6117,
-  "ny": 0.78253
+  "ny": 0.84777
  },
  {
   "id": "forum",
@@ -294,9 +294,9 @@
   "desc": "Complejo cultural del estado inaugurado en 2006: explanadas, la Biblioteca Central Estatal, el Museo de Arte e Historia y el Teatro del Bicentenario.",
   "google_rating": 4.7,
   "x": 13097,
-  "y": 10878,
+  "y": 17022,
   "nx": 0.58135,
-  "ny": 0.7588
+  "ny": 0.83116
  },
  {
   "id": "mahg",
@@ -307,9 +307,9 @@
   "desc": "Museo del Forum Cultural con colecciones de arte e historia del estado y exposiciones internacionales.",
   "google_rating": 4.7,
   "x": 13359,
-  "y": 10800,
+  "y": 16944,
   "nx": 0.59302,
-  "ny": 0.75338
+  "ny": 0.82737
  },
  {
   "id": "bicentenario",
@@ -320,9 +320,9 @@
   "desc": "Teatro de gran formato abierto en 2010 dentro del Forum Cultural, sede de ópera, ballet y del Festival Internacional Cervantino en León.",
   "google_rating": 4.8,
   "x": 12805,
-  "y": 11200,
+  "y": 17344,
   "nx": 0.56838,
-  "ny": 0.78122
+  "ny": 0.84686
  },
  {
   "id": "poliforum",
@@ -333,9 +333,9 @@
   "desc": "Centro de convenciones y exposiciones de la ciudad; aquí se hacen SAPICA y las ferias del calzado y la piel.",
   "google_rating": 4.5,
   "x": 14315,
-  "y": 11799,
+  "y": 17943,
   "nx": 0.63544,
-  "ny": 0.82301
+  "ny": 0.87611
  },
  {
   "id": "feria",
@@ -346,9 +346,9 @@
   "desc": "Recinto de la Feria Estatal de León, cada enero. Junto al estadio, el Poliforum y el Forum forma el gran polo de eventos de la ciudad.",
   "google_rating": 4.6,
   "x": 14348,
-  "y": 11446,
+  "y": 17590,
   "nx": 0.63689,
-  "ny": 0.7984
+  "ny": 0.85888
  },
  {
   "id": "panteon",
@@ -359,9 +359,9 @@
   "desc": "Cementerio histórico del siglo XIX al sur del centro, con mausoleos de las familias leonesas de la época.",
   "google_rating": 4.5,
   "x": 8059,
-  "y": 9789,
+  "y": 15933,
   "nx": 0.35772,
-  "ny": 0.68282
+  "ny": 0.77797
  },
  {
   "id": "guadalupe",
@@ -372,9 +372,9 @@
   "desc": "Santuario del Barrio Arriba, uno de los barrios más antiguos de la ciudad, al noroeste de la Catedral.",
   "google_rating": 4.7,
   "x": 7428,
-  "y": 6414,
+  "y": 12558,
   "nx": 0.3297,
-  "ny": 0.4474
+  "ny": 0.61318
  },
  {
   "id": "madero",
@@ -385,9 +385,9 @@
   "desc": "Eje peatonal que une la Plaza Principal con el Templo Expiatorio y sigue hasta el Arco. Es el paseo comercial clásico del centro.",
   "google_rating": 4.7,
   "x": 9385,
-  "y": 8367,
+  "y": 14511,
   "nx": 0.41658,
-  "ny": 0.58366
+  "ny": 0.70856
  },
  {
   "id": "chapalita",
@@ -398,9 +398,9 @@
   "desc": "Parque de barrio al poniente del centro, con canchas y arboleda; una de las pocas manchas verdes grandes de esta parte de la ciudad.",
   "google_rating": 4.4,
   "x": 4160,
-  "y": 5283,
+  "y": 11427,
   "nx": 0.18466,
-  "ny": 0.36851
+  "ny": 0.55796
  },
  {
   "id": "lasalle",
@@ -411,9 +411,9 @@
   "desc": "Campus universitario al suroeste del centro, con sus canchas y explanadas fáciles de reconocer en el mapa.",
   "google_rating": 4.6,
   "x": 2357,
-  "y": 9286,
+  "y": 15430,
   "nx": 0.10461,
-  "ny": 0.64777
+  "ny": 0.75344
  },
  {
   "id": "mariachi",
@@ -424,9 +424,9 @@
   "desc": "Plaza tradicional del norte del centro donde se contratan mariachis; punto de referencia de la zona.",
   "google_rating": 4.3,
   "x": 8356,
-  "y": 4252,
+  "y": 10396,
   "nx": 0.37091,
-  "ny": 0.29657
+  "ny": 0.5076
  },
  {
   "id": "san-nicolas",
@@ -437,9 +437,9 @@
   "desc": "Templo del barrio de San Nicolás, al norte de la Catedral.",
   "google_rating": 4.5,
   "x": 10435,
-  "y": 5811,
+  "y": 11955,
   "nx": 0.46322,
-  "ny": 0.40534
+  "ny": 0.58374
  },
  {
   "id": "san-miguel",
@@ -450,8 +450,8 @@
   "desc": "Barrio tradicional al sur del centro, de los más antiguos de León, con su templo y su jardín.",
   "google_rating": 4.6,
   "x": 6355,
-  "y": 10545,
+  "y": 16689,
   "nx": 0.28211,
-  "ny": 0.73554
+  "ny": 0.81488
  }
 ]
